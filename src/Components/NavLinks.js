@@ -49,7 +49,7 @@ const NavLinks = () => {
   return (
     <>
       <Offcanvas.Header closeButton closeVariant="white" className="bg-dark " />
-      <Offcanvas.Body className="d-flex justify-content-md-end justify-content-center  bg-dark">
+      <Offcanvas.Body className="d-flex justify-content-md-end justify-content-center bg-dark">
         <Nav className="bg-dark ">
           {links.map((item, index) => (
             <Nav.Item
