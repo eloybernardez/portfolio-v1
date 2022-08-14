@@ -11,8 +11,8 @@ import "../styles/Hero.scss";
 
 function Hero() {
   return (
-    <Stack className="pt-4 bg-dark text-white vh-100" gap={4}>
-      <Container>
+    <Stack className="pt-4 bg-dark text-white " gap={4}>
+      <Container className="vh-100">
         <Row>
           <Col className="justify-content-evenly">
             <h2 className="text-center display-1 fw-bold">
@@ -77,13 +77,13 @@ function Hero() {
             </Stack>
           </Col>
 
-          <Col className="d-none d-md-block d-lg-block d-xxl-block">
+          <Col className="d-none d-md-flex d-lg-flex d-xxl-flex justify-content-end w-75 h-75">
             <Image
               fluid
               rounded
               alt="Eloy's photo"
               src={require("../images/foto-dni-opt.webp")}
-              className="d-none d-md-block d-lg-block d-xxl-block w-75 h-100"
+              className="d-none d-md-flex d-lg-flex d-xxl-flex mb-4 "
             />
           </Col>
         </Row>
