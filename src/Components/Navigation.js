@@ -60,7 +60,7 @@ function Navigation() {
     observerEffect("about");
   }, []);
   return (
-    <header className="bg-dark ">
+    <header className="bg-dark">
       <Navbar collapseOnSelect expand="md" className="bg-dark ">
         <Container className="text-white ">
           <Navbar.Brand className="text-white title">
