@@ -1,0 +1,29 @@
+@keyframes fadeUp {
+  from {
+    transform: translateY(40px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.fadeUpAnimation {
+  transition: fadeUp 1s;
+  animation-name: fadeUp;
+  animation-duration: 1s;
+}
+
+.opacityAnimation {
+  transition: opacity 1s;
+}
+
+.hide {
+  opacity: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .project-row {
+    flex-direction: row !important;
+    align-items: center;
+  }
+}

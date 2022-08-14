@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@300;400;500;600;700&display=swap'");
+@import url("https://fonts.googleapis.com/css2?family=Days+One&display=swap");
+
+$font-family-sans-serif: "Catamaran", sans-serif;
+
+$theme-colors: (
+  "primary": #8aea92,
+  "secondary": #cd5334,
+  "white": white,
+  "dark": #0b0a07,
+);
+
+$colors: (
+  "primary": #8aea92,
+  "secondary": #cd5334,
+  "white": white,
+  "dark": #0b0a07,
+);
+
+$bg-colors: (
+  "primary": #8aea92,
+  "secondary": #cd5334,
+  "white": white,
+  "dark": rgb(11, 10, 7),
+);
+
+@import "~bootstrap/scss/bootstrap";
