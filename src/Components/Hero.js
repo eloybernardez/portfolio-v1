@@ -11,10 +11,10 @@ import "../styles/Hero.scss";
 
 function Hero() {
   return (
-    <Stack className="pt-4 bg-dark text-white " gap={4}>
-      <Container className="vh-100">
+    <Stack className="pt-4 bg-dark text-white" gap={4}>
+      <Container>
         <Row>
-          <Col className="justify-content-evenly">
+          <Col className="justify-content-evenly vh-100 ">
             <h2 className="text-center display-1 fw-bold">
               <span className="text-primary">Hi!</span> I'm <br></br> Eloy
               Bernardez.
@@ -77,13 +77,13 @@ function Hero() {
             </Stack>
           </Col>
 
-          <Col className="d-none d-md-flex d-lg-flex d-xxl-flex justify-content-end w-75 h-75">
+          <Col className="d-none d-md-flex justify-content-center align-items-center">
             <Image
               fluid
               rounded
               alt="Eloy's photo"
               src={require("../images/foto-dni-opt.webp")}
-              className="d-none d-md-flex d-lg-flex d-xxl-flex mb-4 "
+              className="d-none d-md-flex mb-4 "
             />
           </Col>
         </Row>
