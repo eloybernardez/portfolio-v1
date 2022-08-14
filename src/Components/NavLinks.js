@@ -49,7 +49,7 @@ const NavLinks = () => {
   return (
     <>
       <Offcanvas.Header closeButton closeVariant="white" className="bg-dark " />
-      <Offcanvas.Body className="d-flex justify-content-md-end justify-content-center bg-dark">
+      <Offcanvas.Body className="d-flex justify-content-md-end justify-content-center  bg-dark">
         <Nav className="bg-dark ">
           {links.map((item, index) => (
             <Nav.Item
@@ -61,7 +61,7 @@ const NavLinks = () => {
               <span className="text-primary fw-bolder">/</span> {item}
             </Nav.Item>
           ))}
-          <h4 className="title d-sm-none fw-bolder position-absolute bottom-0">
+          <h4 className="title d-sm-none align-self-center fw-bolder position-absolute bottom-0">
             <span className="text-primary px-2">&lt;</span> eloy.dev {""}
             <span className="text-primary">/&gt;</span>
           </h4>
