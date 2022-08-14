@@ -11,7 +11,7 @@ const NavLinks = () => {
 
       function createObserver() {
         let options = {
-          root: null,
+          root: document.body,
           rootMargin: "0px",
           threshold: 0.2,
         };
