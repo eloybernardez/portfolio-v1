@@ -4,7 +4,7 @@ import "../styles/AbilitiesCard.scss";
 
 function AbilitiesCard({ icon, title, abilities }) {
   return (
-    <Card className=" py-3 justify-content-center align-items-center bg-dark text-white w-100">
+    <Card className="border border-0 py-3 justify-content-center align-items-center bg-dark text-white w-100">
       {icon}
       <Card.Body>
         <Card.Title className="fw-bolder ">

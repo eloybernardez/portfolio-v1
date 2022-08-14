@@ -14,7 +14,7 @@ function Hero() {
     <Stack className="pt-4 bg-dark text-white" gap={4}>
       <Container>
         <Row>
-          <Col className="justify-content-evenly mb-4 vh-100 ">
+          <Col className="justify-content-evenly mb-4 ">
             <h2 className="text-center display-1 fw-bold">
               <span className="text-primary">Hi!</span> I'm <br></br> Eloy
               Bernardez.
@@ -83,7 +83,6 @@ function Hero() {
               rounded
               alt="Eloy's photo"
               src={require("../images/foto-dni-opt.webp")}
-              className="d-none d-md-flex  "
             />
           </Col>
         </Row>
