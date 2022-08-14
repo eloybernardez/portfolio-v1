@@ -1,9 +1,0 @@
-@import "App.scss";
-
-.fadeIn {
-  transition: color 1s;
-}
-
-.fadeIn:hover {
-  color: map-get($theme-colors, "primary") !important;
-}
