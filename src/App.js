@@ -1,5 +1,6 @@
 import React from "react";
 import Navigation from "./Components/Navigation";
+
 import { Footer } from "./Containers/Footer";
 import { Main } from "./Containers/Main";
 
@@ -10,7 +11,7 @@ function App() {
     <>
       <Navigation />
       <Main />
-      <Footer id="footer" />
+      <Footer />
     </>
   );
 }
