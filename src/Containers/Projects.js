@@ -45,7 +45,7 @@ const Projects = () => {
       <Container
         id="container-projects"
         fluid
-        className="fadeUpAnimation opacityAnimation hide"
+        className="fadeUpAnimation opacityAnimation hide show"
       >
         {projects.map((project, index) => (
           <Row

@@ -10,7 +10,7 @@ function About({ children }) {
       </h3>
       <div
         id="container-about"
-        className="fadeUpAnimation opacityAnimation hide"
+        className="fadeUpAnimation opacityAnimation hide show"
       >
         {children}
       </div>

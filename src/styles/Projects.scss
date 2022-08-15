@@ -17,13 +17,17 @@
   transition: opacity 1s;
 }
 
-.hide {
-  opacity: 0;
+.show {
+  opacity: 1;
 }
 
 @media screen and (min-width: 768px) {
   .project-row {
     flex-direction: row !important;
     align-items: center;
+  }
+
+  .hide {
+    opacity: 0;
   }
 }
