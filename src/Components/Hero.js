@@ -1,5 +1,6 @@
 import React from "react";
 import { Stack, Button, Image, Container, Row, Col } from "react-bootstrap";
+
 import {
   Facebook,
   Instagram,
@@ -7,9 +8,10 @@ import {
   Github,
   ChevronDoubleRight,
 } from "react-bootstrap-icons";
+
 import "../styles/Hero.scss";
 
-function Hero() {
+function Hero({ imageLoader }) {
   return (
     <Stack className="pt-4 bg-dark text-white" gap={4}>
       <Container>
@@ -77,13 +79,15 @@ function Hero() {
             </Stack>
           </Col>
 
-          <Col className="d-none d-md-flex justify-content-center align-items-center mb-4">
-            <Image
-              fluid
-              rounded
-              alt="Eloy's photo"
-              src={require("../images/foto-dni-opt.webp")}
-            />
+          <Col className="d-none d-md-flex justify-content-center align-items-center mb-4 ">
+            {imageLoader(
+              <Image
+                fluid
+                rounded
+                alt="Eloy's photo"
+                src={require("../images/foto-dni-opt.webp")}
+              />
+            )}
           </Col>
         </Row>
       </Container>

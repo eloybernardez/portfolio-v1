@@ -34,7 +34,7 @@ const projects = [
   },
 ];
 
-const Projects = () => {
+const Projects = ({ imageLoader }) => {
   return (
     <section id="projects" className="py-5 px-3 bg-dark h-auto ">
       <h3 className="text-center fw-bolder display-5 py-5 text-white">
@@ -55,17 +55,19 @@ const Projects = () => {
             {index % 2 === 0 ? (
               <>
                 <Col
-                  className={`align-self-center align-items-center"  col-12 col-sm-6`}
+                  className={`justify-content-center align-items-center align-self-center col-12 col-sm-6 `}
                 >
-                  <Image
-                    rounded
-                    className="w-100 h-100"
-                    fluid
-                    src={project.preview}
-                  />
+                  {imageLoader(
+                    <Image
+                      rounded
+                      className="w-100 h-100 py-2"
+                      fluid
+                      src={project.preview}
+                    />
+                  )}
                 </Col>
                 <Col
-                  className={`align-self-center align-items-center" col-12 col-sm-6`}
+                  className={`justify-content-center align-self-center align-items-center col-12 col-sm-6`}
                 >
                   <Project project={project} />
                 </Col>
@@ -73,19 +75,21 @@ const Projects = () => {
             ) : (
               <>
                 <Col
-                  className={`align-self-center align-items-center col-12 col-sm-6 order-1`}
+                  className={`justify-content-center align-self-center align-items-center col-12 col-sm-6 order-1 `}
                 >
                   <Project project={project} />
                 </Col>
                 <Col
-                  className={`align-self-center align-items-center col-12 col-sm-6 order-0 order-sm-1`}
+                  className={`justify-content-center align-self-center align-items-center col-12 col-sm-6 order-0 order-sm-1 py-2`}
                 >
-                  <Image
-                    rounded
-                    fluid
-                    className="w-100 h-100"
-                    src={project.preview}
-                  />
+                  {imageLoader(
+                    <Image
+                      rounded
+                      fluid
+                      className="w-100 h-100"
+                      src={project.preview}
+                    />
+                  )}
                 </Col>
               </>
             )}
