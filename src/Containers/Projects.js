@@ -7,12 +7,12 @@ import "../styles/Projects.scss";
 const projects = [
   {
     title: "Bankist App",
-    languages: "HTML / CSS / JS",
+    languages: "HTML / CSS / JS / React",
     preview: require("../images/bankist-opt.webp"),
     description:
       "App where you can transfer money to another account and request a loan to the bank.",
-    code: "https://github.com/eloybernardez/bankist",
-    page: "https://eloybernardez.github.io/bankist/dist/",
+    code: "https://github.com/eloybernardez/bankist-react-app",
+    page: "https://bankist-react-mxsxir5ze-eloybernardez.vercel.app",
   },
   {
     title: "Next.js Shop",
