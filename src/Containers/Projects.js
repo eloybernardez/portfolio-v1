@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row, Col, Image } from "react-bootstrap";
-
+import { motion } from "framer-motion";
 import { Project } from "../Components/Project";
 import "../styles/Projects.scss";
 
@@ -37,10 +37,15 @@ const projects = [
 const Projects = ({ imageLoader }) => {
   return (
     <section id="projects" className="py-5 px-3 bg-dark h-auto ">
-      <h3 className="text-center fw-bolder display-5 py-5 text-white">
+      <motion.h3
+        initial={{ y: -15, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ duration: 1 }}
+        className="text-center fw-bolder display-5 py-5 text-white"
+      >
         Pro
         <span className="border-bottom border-2 border-secondary">jects</span>
-      </h3>
+      </motion.h3>
 
       <Container
         id="container-projects"

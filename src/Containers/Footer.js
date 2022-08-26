@@ -1,15 +1,21 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { Envelope, Whatsapp } from "react-bootstrap-icons";
+import { motion } from "framer-motion";
 
 const Footer = () => {
   return (
     <footer id="contact" className="bg-primary">
       <Container fluid="sm">
-        <h4 className="text-center fw-bolder display-5 pt-4">
+        <motion.h4
+          initial={{ x: -15, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 1 }}
+          className="text-center fw-bolder display-5 pt-4"
+        >
           Con
           <span className="border-bottom border-2 border-secondary">tact</span>
-        </h4>
+        </motion.h4>
 
         <Row>
           <Col>

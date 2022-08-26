@@ -1,6 +1,6 @@
 import React from "react";
-import { Stack, Button, Image, Container, Row, Col } from "react-bootstrap";
-
+import { Stack, Button, Container, Row, Col } from "react-bootstrap";
+import { motion } from "framer-motion";
 import {
   Facebook,
   Instagram,
@@ -17,15 +17,25 @@ function Hero({ imageLoader }) {
       <Container>
         <Row>
           <Col className="justify-content-evenly mb-4 ">
-            <h2 className="text-center display-1 fw-bold">
+            <motion.h2
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.8 }}
+              className="text-center display-1 fw-bold"
+            >
               <span className="text-primary">Hi!</span> I'm <br></br> Eloy
               Bernardez.
-            </h2>
+            </motion.h2>
 
-            <p className="px-5 text-center fs-5 ">
+            <motion.p
+              initial={{ x: -25, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{ duration: 0.8 }}
+              className="px-5 text-center fs-5 "
+            >
               I’m a <span className="text-primary ">FrontEnd Dev. Trainee</span>{" "}
               looking my first job in IT.
-            </p>
+            </motion.p>
 
             <Stack
               className="pt-4 justify-content-center"
@@ -80,14 +90,33 @@ function Hero({ imageLoader }) {
           </Col>
 
           <Col className="d-none d-md-flex justify-content-center align-items-center mb-4 ">
-            {imageLoader(
-              <Image
-                fluid
-                rounded
-                alt="Eloy's photo"
-                src={require("../images/foto-dni-opt.webp")}
-              />
-            )}
+            <motion.div
+              initial={{ x: 0, y: 0 }}
+              animate={{
+                x: [0, 25, 50, 100, 150, 200, 150, 100, 50, 25, 0],
+                y: [0, 5, 10, 15, 10, 5, 0],
+              }}
+              transition={{ repeat: Infinity, duration: 10 }}
+              className="astro red-supergiant"
+            ></motion.div>
+            <motion.div
+              initial={{ x: 0, y: 0, z: 0 }}
+              animate={{
+                opacity: 1,
+
+                x: [
+                  0, -50, -100, -150, -200, -250, -300, -350, -400, -450, -400,
+                  -350, -300, -250, -200, -150, -100, -50, -25, 0, 25, 50, 100,
+                ],
+                y: [
+                  0, 25, 50, 75, 100, 75, 50, 25, 0, -25, -50, -75, -100, -75,
+                  -50, -25, 0,
+                ],
+                z: [0, 5, 10, 15, 20, 15, 10, 5, 0],
+              }}
+              transition={{ repeat: Infinity, duration: 10 }}
+              className="astro white-dwarf"
+            ></motion.div>
           </Col>
         </Row>
       </Container>

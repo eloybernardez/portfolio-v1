@@ -1,5 +1,5 @@
 import React from "react";
-import { Spinner, Container, Col, Row } from "react-bootstrap";
+import { Spinner } from "react-bootstrap";
 import { Main } from "./Containers/Main";
 import { About } from "./Containers/About";
 import { Cards } from "./Components/Cards";
