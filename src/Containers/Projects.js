@@ -44,6 +44,64 @@ const Projects = () => {
     setLoading(false);
   };
 
+  const Component = React.forwardRef((props, ref) => (
+    <Container
+      id="container-projects"
+      fluid
+      ref={ref}
+      className="fadeUpAnimation opacityAnimation hide show"
+    >
+      {projects.map((project, index) => (
+        <Row key={`Project-${index}`} className="mb-3 bg-white border rounded ">
+          {index % 2 === 0 ? (
+            <>
+              <Col
+                className={`justify-content-center align-items-center align-self-center col-12 col-sm-6 `}
+              >
+                {imageLoader(
+                  <Image
+                    rounded
+                    className="w-100 h-100 py-2"
+                    fluid
+                    src={project.preview}
+                  />
+                )}
+              </Col>
+              <Col
+                className={`justify-content-center align-self-center align-items-center col-12 col-sm-6`}
+              >
+                <Project project={project} />
+              </Col>
+            </>
+          ) : (
+            <>
+              <Col
+                className={`justify-content-center align-self-center align-items-center col-12 col-sm-6 order-1 `}
+              >
+                <Project project={project} />
+              </Col>
+              <Col
+                className={`justify-content-center align-self-center align-items-center col-12 col-sm-6 order-0 order-sm-1 py-2`}
+              >
+                {imageLoader(
+                  <Image
+                    rounded
+                    fluid
+                    className="w-100 h-100"
+                    src={project.preview}
+                    alt={project.alt}
+                  />
+                )}
+              </Col>
+            </>
+          )}
+        </Row>
+      ))}
+    </Container>
+  ));
+
+  const MotionComponent = m(Component);
+
   const imageLoader = (img) => {
     if (loading) {
       setTimeout(handleLoading, 3000);
@@ -71,61 +129,10 @@ const Projects = () => {
         <span className="border-bottom border-2 border-secondary">jects</span>
       </m.h3>
 
-      <Container
-        id="container-projects"
-        fluid
-        className="fadeUpAnimation opacityAnimation hide show"
-      >
-        {projects.map((project, index) => (
-          <Row
-            key={`Project-${index}`}
-            className="mb-3 bg-white border rounded "
-          >
-            {index % 2 === 0 ? (
-              <>
-                <Col
-                  className={`justify-content-center align-items-center align-self-center col-12 col-sm-6 `}
-                >
-                  {imageLoader(
-                    <Image
-                      rounded
-                      className="w-100 h-100 py-2"
-                      fluid
-                      src={project.preview}
-                    />
-                  )}
-                </Col>
-                <Col
-                  className={`justify-content-center align-self-center align-items-center col-12 col-sm-6`}
-                >
-                  <Project project={project} />
-                </Col>
-              </>
-            ) : (
-              <>
-                <Col
-                  className={`justify-content-center align-self-center align-items-center col-12 col-sm-6 order-1 `}
-                >
-                  <Project project={project} />
-                </Col>
-                <Col
-                  className={`justify-content-center align-self-center align-items-center col-12 col-sm-6 order-0 order-sm-1 py-2`}
-                >
-                  {imageLoader(
-                    <Image
-                      rounded
-                      fluid
-                      className="w-100 h-100"
-                      src={project.preview}
-                      alt={project.alt}
-                    />
-                  )}
-                </Col>
-              </>
-            )}
-          </Row>
-        ))}
-      </Container>
+      <MotionComponent
+        initial={{ y: -15, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+      />
     </section>
   );
 };
