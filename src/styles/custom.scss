@@ -17,6 +17,19 @@ $colors: (
   "dark": #0b0a07,
 );
 
+// Accordion custom styles
+$accordion-button-active-color: #cd5334;
+$accordion-button-active-bg: #fff;
+$accordion-button-focus-border-color: #8aea92;
+$accordion-button-focus-box-shadow: 0 0 0 2px #cd5334;
+
+// Navbar custom styles
+.navbar-toggler:focus {
+  box-shadow: 0 0 0 2px #8aea92 !important;
+}
+
+$link-color: #8aea92;
+
 $bg-colors: (
   "primary": #8aea92,
   "secondary": #cd5334,

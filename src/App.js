@@ -38,7 +38,7 @@ function App() {
     <>
       <Navigation />
       <Main
-        renderHero={() => <Hero imageLoader={imageLoader} />}
+        renderHero={() => <Hero />}
         renderProjects={() => <Projects imageLoader={imageLoader} />}
       >
         <About>

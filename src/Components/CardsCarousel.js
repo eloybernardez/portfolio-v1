@@ -4,7 +4,7 @@ import { AbilitiesCard } from "./AbilitiesCard";
 
 const CardsCarousel = ({ cards }) => {
   return (
-    <Carousel className="d-md-none mb-5 mx-1 ">
+    <Carousel className="d-md-none">
       {cards.map((card, index) => (
         <Carousel.Item className="px-2" key={`Card-${index}`}>
           <AbilitiesCard

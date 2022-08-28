@@ -1,6 +1,6 @@
 import React from "react";
 import { Stack, Button, Container, Row, Col } from "react-bootstrap";
-import { motion } from "framer-motion";
+import { motion, useMotionValue, useTransform } from "framer-motion";
 import {
   Facebook,
   Instagram,
@@ -11,7 +11,10 @@ import {
 
 import "../styles/Hero.scss";
 
-function Hero({ imageLoader }) {
+function Hero() {
+  const variantRedGiant = { front: { zIndex: 1 }, back: { zIndex: 0 } };
+  const x = useMotionValue(0);
+  const zIndex = useTransform(x, [0, -450, 0, 350], [1, 0, 0, 0]);
   return (
     <Stack className="pt-4 bg-dark text-white" gap={4}>
       <Container>
@@ -51,13 +54,16 @@ function Hero({ imageLoader }) {
                 Contact me!
               </Button>
               <Button
-                className="fw-bolder text-decoration-none text-white"
+                className="btn-outline-primary border-0 fw-bolder text-decoration-none text-white"
                 type="button"
-                variant="link"
+                variant="light"
                 href="#projects"
               >
                 Projects
-                <ChevronDoubleRight size={18} className="text-secondary " />
+                <ChevronDoubleRight
+                  size={18}
+                  className="arrows text-secondary"
+                />
               </Button>
             </Stack>
 
@@ -66,15 +72,28 @@ function Hero({ imageLoader }) {
               direction="horizontal"
               gap={2}
             >
-              <Button variant="link" type="button" as="a" href="/">
+              <Button
+                className="btn-social"
+                type="button"
+                variant="link"
+                as="a"
+                href="/"
+              >
                 <Facebook size={25} className="text-primary" />
               </Button>
 
-              <Button variant="link" type="button" as="a" href="/">
+              <Button
+                className="btn-social"
+                variant="link"
+                type="button"
+                as="a"
+                href="https://www.instagram.com/eloy.bernardez"
+              >
                 <Instagram size={25} className="text-primary" />
               </Button>
 
               <Button
+                className="btn-social"
                 variant="link"
                 type="button"
                 as="a"
@@ -83,18 +102,25 @@ function Hero({ imageLoader }) {
                 <Linkedin size={25} className="text-primary" />
               </Button>
 
-              <Button variant="link" type="button" as="a" href="/">
+              <Button
+                className="btn-social"
+                variant="link"
+                type="button"
+                as="a"
+                href="https://github.com/eloybernardez"
+              >
                 <Github size={25} className="text-primary" />
               </Button>
             </Stack>
           </Col>
 
-          <Col className="d-none d-md-flex justify-content-center align-items-center mb-4 ">
+          <Col className="d-none d-lg-flex justify-content-center align-items-center mb-4 ">
             <motion.div
-              initial={{ x: 0, y: 0 }}
+              initial={{ x: 0, y: 0, z: 0 }}
+              variants={variantRedGiant}
               animate={{
-                x: [0, 25, 50, 100, 150, 200, 150, 100, 50, 25, 0],
-                y: [0, 5, 10, 15, 10, 5, 0],
+                x: [0, 200, 0],
+                y: [0, 15, 0],
               }}
               transition={{ repeat: Infinity, duration: 10 }}
               className="astro red-supergiant"
@@ -103,17 +129,11 @@ function Hero({ imageLoader }) {
               initial={{ x: 0, y: 0, z: 0 }}
               animate={{
                 opacity: 1,
-
-                x: [
-                  0, -50, -100, -150, -200, -250, -300, -350, -400, -450, -400,
-                  -350, -300, -250, -200, -150, -100, -50, -25, 0, 25, 50, 100,
-                ],
-                y: [
-                  0, 25, 50, 75, 100, 75, 50, 25, 0, -25, -50, -75, -100, -75,
-                  -50, -25, 0,
-                ],
-                z: [0, 5, 10, 15, 20, 15, 10, 5, 0],
+                x: [0, -450, 0, 350],
+                y: [0, 100, 0, -100, 0],
+                z: [0, 20, 0],
               }}
+              style={{ x, zIndex }}
               transition={{ repeat: Infinity, duration: 10 }}
               className="astro white-dwarf"
             ></motion.div>

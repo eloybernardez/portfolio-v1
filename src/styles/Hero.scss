@@ -12,6 +12,15 @@
   animation-direction: alternate;
 }
 
+.btn-social:hover {
+  transition: all 1s;
+  transform: scale(1.4);
+}
+
+.btn-projects:hover {
+  color: #cd5334;
+}
+
 .astro {
   width: 200px;
   height: 200px;
@@ -24,13 +33,14 @@
 }
 
 .red-supergiant {
-  background-color: #ff0000;
+  z-index: 1;
+  background: radial-gradient(circle at 250px 250px, #cd5334, #000);
   width: 250px;
   height: 250px;
 }
 
 .white-dwarf {
-  background-color: #fff;
+  background: radial-gradient(circle at 100px 100px, #fff, #000);
   width: 100px;
   height: 100px;
 }

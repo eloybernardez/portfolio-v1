@@ -17,10 +17,20 @@ function Project({ project }) {
           gap={3}
           className="justify-content-center align-items-center"
         >
-          <Button as="a" href={project.code} variant="transparent">
+          <Button
+            className="border-0 btn-lg"
+            as="a"
+            href={project.code}
+            variant="transparent"
+          >
             <CodeSlash size={30} className="text-secondary"></CodeSlash>
           </Button>
-          <Button as="a" href={project.page} variant="transparent">
+          <Button
+            className="border-0 btn-lg "
+            as="a"
+            href={project.page}
+            variant="transparent"
+          >
             <BoxArrowUpRight
               size={30}
               className="text-secondary"
