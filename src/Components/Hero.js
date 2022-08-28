@@ -1,13 +1,15 @@
 import React from "react";
 import { Stack, Button, Container, Row, Col } from "react-bootstrap";
-import { motion, useMotionValue, useTransform } from "framer-motion";
+import { m, useMotionValue, useTransform } from "framer-motion";
+
 import {
-  Facebook,
-  Instagram,
-  Linkedin,
-  Github,
-  ChevronDoubleRight,
-} from "react-bootstrap-icons";
+  FaFacebookF as Facebook,
+  FaInstagram as Instagram,
+  FaLinkedinIn as Linkedin,
+  FaGithub as Github,
+} from "react-icons/fa";
+
+import { FiChevronsRight as ChevronDoubleRight } from "react-icons/fi";
 
 import "../styles/Hero.scss";
 
@@ -20,7 +22,7 @@ function Hero() {
       <Container>
         <Row>
           <Col className="justify-content-evenly mb-4 ">
-            <motion.h2
+            <m.h2
               initial={{ opacity: 0, y: -10 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.8 }}
@@ -28,9 +30,9 @@ function Hero() {
             >
               <span className="text-primary">Hi!</span> I'm <br></br> Eloy
               Bernardez.
-            </motion.h2>
+            </m.h2>
 
-            <motion.p
+            <m.p
               initial={{ x: -25, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.8 }}
@@ -38,7 +40,7 @@ function Hero() {
             >
               I’m a <span className="text-primary ">FrontEnd Dev. Trainee</span>{" "}
               looking my first job in IT.
-            </motion.p>
+            </m.p>
 
             <Stack
               className="pt-4 justify-content-center"
@@ -115,7 +117,7 @@ function Hero() {
           </Col>
 
           <Col className="d-none d-lg-flex justify-content-center align-items-center mb-4 ">
-            <motion.div
+            <m.div
               initial={{ x: 0, y: 0, z: 0 }}
               variants={variantRedGiant}
               animate={{
@@ -124,8 +126,8 @@ function Hero() {
               }}
               transition={{ repeat: Infinity, duration: 10 }}
               className="astro red-supergiant"
-            ></motion.div>
-            <motion.div
+            ></m.div>
+            <m.div
               initial={{ x: 0, y: 0, z: 0 }}
               animate={{
                 opacity: 1,
@@ -136,7 +138,7 @@ function Hero() {
               style={{ x, zIndex }}
               transition={{ repeat: Infinity, duration: 10 }}
               className="astro white-dwarf"
-            ></motion.div>
+            ></m.div>
           </Col>
         </Row>
       </Container>

@@ -1,6 +1,7 @@
 import React from "react";
 import { Card, Button, Stack } from "react-bootstrap";
-import { CodeSlash, BoxArrowUpRight } from "react-bootstrap-icons";
+import { AiOutlineCode as CodeSlash } from "react-icons/ai";
+import { BsBoxArrowUpRight as BoxArrowUpRight } from "react-icons/bs";
 import "../styles/Project.scss";
 
 function Project({ project }) {

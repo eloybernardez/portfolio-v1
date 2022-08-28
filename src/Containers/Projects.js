@@ -1,6 +1,6 @@
 import React from "react";
-import { Container, Row, Col, Image } from "react-bootstrap";
-import { motion } from "framer-motion";
+import { Container, Row, Col, Image, Spinner } from "react-bootstrap";
+import { m } from "framer-motion";
 import { Project } from "../Components/Project";
 import "../styles/Projects.scss";
 
@@ -9,6 +9,7 @@ const projects = [
     title: "Bankist App",
     languages: "HTML / CSS / JS / React",
     preview: require("../images/bankist-opt.webp"),
+    alt: "Bankist App",
     description:
       "App where you can transfer money to another account and request a loan to the bank.",
     code: "https://github.com/eloybernardez/bankist-react-app",
@@ -18,6 +19,7 @@ const projects = [
     title: "Next.js Shop",
     languages: "HTML / CSS / JS / Next.js",
     preview: require("../images/next-shop-opt.webp"),
+    alt: "Next.js Shop",
     description:
       "E-commerce where you can add / remove products. You can also filter products by categories.",
     code: "https://github.com/eloybernardez/next-shop",
@@ -27,6 +29,7 @@ const projects = [
     title: "Todo Machine",
     languages: "HTML / CSS / JS / React",
     preview: require("../images/todo1.webp"),
+    alt: "Todo Machine",
     description:
       "A TODO machine where you can add / complete / remove TODOS. Also, you can search for a specific TODO using the search bar.",
     code: "https://github.com/eloybernardez/todo-machine",
@@ -34,10 +37,31 @@ const projects = [
   },
 ];
 
-const Projects = ({ imageLoader }) => {
+const Projects = () => {
+  const [loading, setLoading] = React.useState(true);
+
+  const handleLoading = () => {
+    setLoading(false);
+  };
+
+  const imageLoader = (img) => {
+    if (loading) {
+      setTimeout(handleLoading, 3000);
+      return (
+        <Spinner
+          animation="border"
+          variant="primary"
+          role="status"
+          className="justify-content-center align-items-center align-self-center"
+        />
+      );
+    } else {
+      return img;
+    }
+  };
   return (
     <section id="projects" className="py-5 px-3 bg-dark h-auto ">
-      <motion.h3
+      <m.h3
         initial={{ y: -15, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 1 }}
@@ -45,7 +69,7 @@ const Projects = ({ imageLoader }) => {
       >
         Pro
         <span className="border-bottom border-2 border-secondary">jects</span>
-      </motion.h3>
+      </m.h3>
 
       <Container
         id="container-projects"
@@ -93,6 +117,7 @@ const Projects = ({ imageLoader }) => {
                       fluid
                       className="w-100 h-100"
                       src={project.preview}
+                      alt={project.alt}
                     />
                   )}
                 </Col>

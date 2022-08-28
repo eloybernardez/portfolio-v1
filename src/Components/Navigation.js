@@ -1,12 +1,8 @@
 import React from "react";
-
 import { BrowserRouter } from "react-router-dom";
 import { HashLink as Link } from "react-router-hash-link";
-
 import { Container, Navbar, Nav, Offcanvas } from "react-bootstrap";
-
-import { List } from "react-bootstrap-icons";
-
+import { BsList as List } from "react-icons/bs";
 import "../styles/Navigation.scss";
 
 const links = ["Home", "About Me", "Projects", "Contact"];

@@ -1,6 +1,10 @@
 import React from "react";
 import { Container } from "react-bootstrap";
-import { GearFill, ListCheck, PeopleFill } from "react-bootstrap-icons";
+import { BsListCheck as ListCheck } from "react-icons/bs";
+import {
+  FaBrain as GearFill,
+  FaPeopleCarry as PeopleFill,
+} from "react-icons/fa";
 import { CardsCarousel } from "./CardsCarousel";
 import { CardsStack } from "./CardsStack";
 

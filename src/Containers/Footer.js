@@ -1,13 +1,16 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import { Envelope, Whatsapp } from "react-bootstrap-icons";
-import { motion } from "framer-motion";
+import {
+  BsFillEnvelopeFill as Envelope,
+  BsWhatsapp as Whatsapp,
+} from "react-icons/bs";
+import { m } from "framer-motion";
 
 const Footer = () => {
   return (
     <footer id="contact" className="bg-primary">
       <Container fluid="sm">
-        <motion.h4
+        <m.h4
           initial={{ x: -15, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 1 }}
@@ -15,7 +18,7 @@ const Footer = () => {
         >
           Con
           <span className="border-bottom border-2 border-secondary">tact</span>
-        </motion.h4>
+        </m.h4>
 
         <Row>
           <Col>
