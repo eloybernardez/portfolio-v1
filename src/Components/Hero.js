@@ -14,11 +14,10 @@ import { FiChevronsRight as ChevronDoubleRight } from "react-icons/fi";
 import "../styles/Hero.scss";
 
 function Hero() {
-  const variantRedGiant = { front: { zIndex: 1 }, back: { zIndex: 0 } };
   const x = useMotionValue(0);
-  const zIndex = useTransform(x, [0, -450, 0, 350], [1, 0, 0, 0]);
+  const zIndex = useTransform(x, [0, -450, 0, 400], [1, 0, 0, 0]);
   return (
-    <Stack className="pt-4 bg-dark text-white" gap={4}>
+    <Stack className="pt-4 bg-dark text-white vh-100" gap={4}>
       <Container>
         <Row>
           <Col className="justify-content-evenly mb-4 ">
@@ -64,7 +63,7 @@ function Hero() {
                 Projects
                 <ChevronDoubleRight
                   size={18}
-                  className="arrows text-secondary"
+                  className="arrows text-secondary vertical-align-sub"
                 />
               </Button>
             </Stack>
@@ -119,7 +118,6 @@ function Hero() {
           <Col className="d-none d-lg-flex justify-content-center align-items-center mb-4 ">
             <m.div
               initial={{ x: 0, y: 0, z: 0 }}
-              variants={variantRedGiant}
               animate={{
                 x: [0, 200, 0],
                 y: [0, 15, 0],
@@ -131,7 +129,7 @@ function Hero() {
               initial={{ x: 0, y: 0, z: 0 }}
               animate={{
                 opacity: 1,
-                x: [0, -450, 0, 350],
+                x: [0, -450, 0, 400],
                 y: [0, 100, 0, -100, 0],
                 z: [0, 20, 0],
               }}

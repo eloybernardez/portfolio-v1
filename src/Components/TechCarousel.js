@@ -37,7 +37,7 @@ const techs = [
 
   {
     title: "Styled Components",
-    text: "Styled Components is a library for React that allows you to write CSS in JS. It is a style system that allows you to write CSS in JS.",
+    text: "Styled Components is a library for React that allows you to write CSS in JS.",
     icon: (
       <>
         <FaLessThan size={15} color="#000" />
@@ -63,7 +63,7 @@ const TechCarousel = () => {
             {tech.icon}
             <p className="my-0 mx-2 fw-bold">{tech.title}</p>
           </Accordion.Header>
-          <Accordion.Body>{tech.text}</Accordion.Body>
+          <Accordion.Body className="fw-regular">{tech.text}</Accordion.Body>
         </Accordion.Item>
       ))}
     </Accordion>

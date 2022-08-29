@@ -18,47 +18,6 @@ function Navigation() {
     setShow(true);
   };
 
-  React.useEffect(() => {
-    function observerEffect(section) {
-      let target;
-
-      function createObserver() {
-        let options = {
-          root: null,
-          rootMargin: "-20px",
-          threshold: 0.1,
-        };
-
-        let callback = (entries) => {
-          entries.forEach((entry) => {
-            entry.isIntersecting &&
-              entry.intersectionRatio < 0.5 &&
-              target.classList.remove("hide");
-          });
-        };
-
-        let observer = new IntersectionObserver(callback, options);
-        observer.observe(target);
-      }
-
-      function runObserver(section) {
-        target = document.getElementById(`container-${section}`);
-        createObserver();
-      }
-
-      window.addEventListener("load", () => {
-        runObserver(section);
-      });
-
-      return () =>
-        window.removeEventListener("load", () => {
-          runObserver(section);
-        });
-    }
-    observerEffect("projects");
-    observerEffect("about");
-  }, []);
-
   return (
     <BrowserRouter>
       <header className="bg-dark">
