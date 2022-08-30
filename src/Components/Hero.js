@@ -15,9 +15,14 @@ import "../styles/Hero.scss";
 
 function Hero() {
   const x = useMotionValue(0);
-  const zIndex = useTransform(x, [0, -450, 0, 400], [1, 0, 0, 0]);
+  const zIndex = useTransform(x, [0, -600, -485, 300], [1, 0, 0, 0]);
+
   return (
-    <Stack className="pt-4 bg-dark text-white vh-100" gap={4}>
+    <Stack
+      className="pt-5 bg-dark text-white"
+      style={{ height: "40rem" }}
+      gap={4}
+    >
       <Container>
         <Row>
           <Col className="justify-content-evenly mb-4 ">
@@ -115,23 +120,23 @@ function Hero() {
             </Stack>
           </Col>
 
-          <Col className="d-none d-lg-flex justify-content-center align-items-center mb-4 ">
+          <Col className="d-none d-lg-flex justify-content-end align-items-center mb-4 ">
             <m.div
-              initial={{ x: 0, y: 0, z: 0 }}
+              initial={{ x: 50, y: 0, rotate: 0 }}
               animate={{
-                x: [0, 200, 0],
-                y: [0, 15, 0],
+                x: [20, -20],
+                y: [0, 15],
+                rotate: [0, 360],
               }}
               transition={{ repeat: Infinity, duration: 10 }}
               className="astro red-supergiant"
             ></m.div>
             <m.div
-              initial={{ x: 0, y: 0, z: 0 }}
+              initial={{ x: 0, y: 0, rotate: 0, zIndex: 1 }} //50
               animate={{
-                opacity: 1,
-                x: [0, -450, 0, 400],
-                y: [0, 100, 0, -100, 0],
-                z: [0, 20, 0],
+                x: [0, -600, -480, 300, 0],
+                y: [0, -20, 0, 10, 0],
+                rotate: [0, -360],
               }}
               style={{ x, zIndex }}
               transition={{ repeat: Infinity, duration: 10 }}

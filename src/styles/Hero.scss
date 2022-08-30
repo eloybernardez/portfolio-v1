@@ -21,9 +21,16 @@
   color: #cd5334;
 }
 
+.scene {
+  perspective: 400vmin;
+  transform-style: preserve-3d;
+}
+
 .astro {
   width: 200px;
   height: 200px;
+  transform-style: preserve-3d;
+  transform-origin: 50% 50%;
   position: relative;
   top: 0;
   left: 0;

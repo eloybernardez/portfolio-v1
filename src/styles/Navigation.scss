@@ -4,7 +4,8 @@
   transition: color 1s;
 }
 
-.fadeIn:hover {
+.fadeIn:hover,
+.fadeIn:focus {
   color: map-get($theme-colors, "primary") !important;
 }
 
