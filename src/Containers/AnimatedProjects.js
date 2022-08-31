@@ -7,7 +7,7 @@ const PROJECTS = [
   {
     title: "Bankist App",
     languages: "HTML / CSS / JS / React",
-    preview: require("../images/bankist-opt.webp"),
+    preview: require("../images/bankist-v2-opt.webp"),
     alt: "Bankist App",
     description:
       "App where you can transfer money to another account and request a loan to the bank.",
@@ -27,7 +27,7 @@ const PROJECTS = [
   {
     title: "Todo Machine",
     languages: "HTML / CSS / JS / React",
-    preview: require("../images/todo1.webp"),
+    preview: require("../images/todos-v2-opt.webp"),
     alt: "Todo Machine",
     description:
       "A TODO machine where you can add / complete / remove TODOS. Also, you can search for a specific TODO using the search bar.",
