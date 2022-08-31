@@ -19,22 +19,25 @@ function Project({ project }) {
           className="justify-content-center align-items-center"
         >
           <Button
-            className="border-0 btn-lg"
+            className="border-0 btn-lg "
             as="a"
             href={project.code}
             variant="transparent"
           >
-            <CodeSlash size={30} className="text-secondary"></CodeSlash>
+            <CodeSlash
+              size={30}
+              className="text-secondary project-btn"
+            ></CodeSlash>
           </Button>
           <Button
-            className="border-0 btn-lg "
+            className="border-0 btn-lg project-btn "
             as="a"
             href={project.page}
             variant="transparent"
           >
             <BoxArrowUpRight
               size={30}
-              className="text-secondary"
+              className="text-secondary project-btn"
             ></BoxArrowUpRight>
           </Button>
         </Stack>
