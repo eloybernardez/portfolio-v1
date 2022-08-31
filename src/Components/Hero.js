@@ -19,8 +19,8 @@ function Hero() {
 
   return (
     <Stack
-      className="pt-5 bg-dark text-white"
-      style={{ height: "40rem" }}
+      className="pt-5 bg-dark text-white justify-content-center"
+      style={{ height: "35rem" }}
       gap={4}
     >
       <Container>
