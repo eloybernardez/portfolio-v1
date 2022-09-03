@@ -13,16 +13,7 @@ const PROJECTS = [
       "App where you can transfer money to another account and request a loan to the bank.",
     code: "https://github.com/eloybernardez/bankist-react-app",
     page: "https://bankist-react-app.vercel.app/",
-  },
-  {
-    title: "Next.js Shop",
-    languages: "HTML / CSS / JS / Next.js",
-    preview: require("../images/next-shop-opt.webp"),
-    alt: "Next.js Shop",
-    description:
-      "E-commerce where you can add / remove products. You can also filter products by categories.",
-    code: "https://github.com/eloybernardez/next-shop",
-    page: "https://next-shop-omega.vercel.app/",
+    state: "finished",
   },
   {
     title: "Todo Machine",
@@ -33,6 +24,18 @@ const PROJECTS = [
       "A TODO machine where you can add / complete / remove TODOS. Also, you can search for a specific TODO using the search bar.",
     code: "https://github.com/eloybernardez/todo-machine",
     page: "https://todo-machine-ecru.vercel.app/",
+    state: "finished",
+  },
+  {
+    title: "Next.js Shop",
+    languages: "HTML / CSS / JS / Next.js",
+    preview: require("../images/next-shop-opt.webp"),
+    alt: "Next.js Shop",
+    description:
+      "E-commerce where you can add / remove products. You can also filter products by categories.",
+    code: "https://github.com/eloybernardez/next-shop",
+    page: "https://next-shop-omega.vercel.app/",
+    state: "in-progress",
   },
 ];
 

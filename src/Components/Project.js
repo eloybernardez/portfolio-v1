@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, Button, Stack } from "react-bootstrap";
+import { Card, Button, Stack, Badge } from "react-bootstrap";
 import { AiOutlineCode as CodeSlash } from "react-icons/ai";
 import { BsBoxArrowUpRight as BoxArrowUpRight } from "react-icons/bs";
 import "../styles/Project.scss";
@@ -7,8 +7,17 @@ import "../styles/Project.scss";
 function Project({ project }) {
   return (
     <Card border="white" className="align-items-center justify-content-center ">
-      <Card.Body className=" w-100 justify-content-center">
-        <Card.Title className="fw-bolder">{project.title}</Card.Title>
+      <Card.Body className="w-100 justify-content-center">
+        <Card.Title className="fw-bolder">
+          {project.title}{" "}
+          <Badge
+            bg={`${project.state === "finished" ? "primary" : "warning"}`}
+            className="text-dark"
+          >
+            {`${project.state === "finished" ? "Completed" : "In progress"}`}
+          </Badge>
+        </Card.Title>
+
         <Card.Subtitle className="text-secondary">
           {project.languages}
         </Card.Subtitle>
