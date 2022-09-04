@@ -10,7 +10,7 @@ const PROJECTS = [
     preview: require("../images/pig-game-opt.webp"),
     alt: "Pig Game",
     description:
-      "A game where two players throw a 6-sided dice repeteadly, adding the dice number to the player score, until the current one of them gets a score of 100 or more.",
+      "A game where two players throw a 6-sided dice repeteadly, adding the dice number to the player score, until one of them reaches a score of 100 or more.",
     code: "https://github.com/eloybernardez/pig-game",
     page: "https://eloybernardez.github.io/pig-game/",
     state: "finished",
