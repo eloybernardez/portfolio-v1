@@ -43,7 +43,7 @@ function Hero() {
               className="px-5 text-center fs-5 "
             >
               I’m a <span className="text-primary ">FrontEnd Dev. Trainee</span>{" "}
-              looking my first job in IT.
+              looking my first job experience.
             </m.p>
 
             <Stack
