@@ -5,6 +5,17 @@ import { Project } from "../Components/Project";
 
 const PROJECTS = [
   {
+    title: "Pig Game",
+    languages: "HTML / CSS / JS",
+    preview: require("../images/pig-game-opt.webp"),
+    alt: "Pig Game",
+    description:
+      "A game where two players throw a 6-sided dice repeteadly, adding the dice number to the player score, until the current one of them gets a score of 100 or more.",
+    code: "https://github.com/eloybernardez/pig-game",
+    page: "https://eloybernardez.github.io/pig-game/",
+    state: "finished",
+  },
+  {
     title: "Bankist App",
     languages: "HTML / CSS / JS / React",
     preview: require("../images/bankist-v2-opt.webp"),
@@ -26,6 +37,7 @@ const PROJECTS = [
     page: "https://todo-machine-ecru.vercel.app/",
     state: "finished",
   },
+
   {
     title: "Next.js Shop",
     languages: "HTML / CSS / JS / Next.js",
