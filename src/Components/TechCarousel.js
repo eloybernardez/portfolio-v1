@@ -12,7 +12,7 @@ const techs = [
   },
   {
     title: "CSS3",
-    text: "CSS3 is the latest evolution of the Cascading Style Sheets language and aims to achieve compatibility with all current and future CSS usage. CSS3 has been standardized by the W3C since 2008.",
+    text: "CSS3 is a style sheet language used for describing the presentation of a document written in a markup language. It is a cornerstone technology of the World Wide Web.",
     icon: <ImCss3 size={50} color="rgb(33,76,229)" />,
   },
   {
