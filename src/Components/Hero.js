@@ -42,8 +42,13 @@ function Hero() {
               transition={{ duration: 0.8 }}
               className="px-5 text-center fs-5 "
             >
-              I’m a <span className="text-primary ">FrontEnd Dev. Trainee</span>{" "}
-              looking my first job experience.
+              I’m a <span className="text-primary ">FrontEnd Developer</span>{" "}
+              oriented to <span className="text-primary">React</span>. <br></br>{" "}
+              I love creating{" "}
+              <span className="text-primary">
+                innovative life-changing webpages
+              </span>{" "}
+              that everybody can use, improving their online experience.
             </m.p>
 
             <Stack
@@ -103,7 +108,7 @@ function Hero() {
                 variant="link"
                 type="button"
                 as="a"
-                href="https://www.linkedin.com/in/eloy-bernardez-b8474a154/"
+                href="https://www.linkedin.com/in/eloy-bernardez/"
               >
                 <Linkedin size={25} className="text-primary" />
               </Button>
