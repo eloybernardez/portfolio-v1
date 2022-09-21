@@ -3,7 +3,7 @@ import "../styles/Main.scss";
 
 const Main = (props) => {
   return (
-    <main id="home" className="overflow-hidden">
+    <main className="overflow-hidden">
       {props.renderHero()}
       {props.children}
       {props.renderProjects()}

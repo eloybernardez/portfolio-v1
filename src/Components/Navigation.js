@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Container, Navbar, Nav } from "react-bootstrap";
 import { BsList as List } from "react-icons/bs";
 import "../styles/Navigation.scss";
@@ -6,7 +6,7 @@ import "../styles/Navigation.scss";
 const links = ["Home", "About Me", "Projects", "Contact"];
 
 function Navigation() {
-  const [show, setShow] = React.useState(false);
+  const [show, setShow] = useState(false);
 
   const handleShow = () => {
     setShow(true);
@@ -20,8 +20,8 @@ function Navigation() {
         className="bg-dark rounded-bottom"
         fixed="top"
       >
-        <Container className="text-white ">
-          <Navbar.Brand href="#home" className="text-white title">
+        <Container className="text-white">
+          <Navbar.Brand href="#home" className="text-white title  ">
             <span className="text-primary">&lt; </span>
             eloy.dev
             <span className="text-primary"> /&gt;</span>

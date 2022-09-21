@@ -19,13 +19,13 @@ function Hero() {
 
   return (
     <Stack
-      className="pt-5 bg-dark text-white justify-content-center"
+      id="home"
+      className="bg-dark text-white justify-content-center pt-md-3 "
       style={{ height: "35rem" }}
-      gap={4}
     >
       <Container>
         <Row>
-          <Col className="justify-content-evenly mb-4 ">
+          <Col className="justify-content-evenly pt-md-5 mb-4 ">
             <m.h2
               initial={{ opacity: 0, y: -10 }}
               animate={{ y: 0, opacity: 1 }}
@@ -40,15 +40,15 @@ function Hero() {
               initial={{ x: -25, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.8 }}
-              className="px-5 text-center fs-5 "
+              className="px-5 text-center"
             >
               I’m a <span className="text-primary ">FrontEnd Developer</span>{" "}
-              oriented to <span className="text-primary">React</span>. <br></br>{" "}
+              oriented to <span className="text-primary">React</span>. <br></br>
               I love creating{" "}
               <span className="text-primary">
                 innovative life-changing webpages
               </span>{" "}
-              that everybody can use, improving their online experience.
+              that everybody can use.
             </m.p>
 
             <Stack
