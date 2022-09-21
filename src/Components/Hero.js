@@ -88,7 +88,7 @@ function Hero() {
                 type="button"
                 variant="link"
                 as="a"
-                href="/"
+                href="https://www.facebook.com/eloy.bernardez"
               >
                 <Facebook size={25} className="text-primary" />
               </Button>
