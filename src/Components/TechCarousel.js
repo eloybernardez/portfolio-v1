@@ -1,6 +1,6 @@
 import React from "react";
 import { Accordion } from "react-bootstrap";
-import { SiJavascript, SiReact, SiBootstrap } from "react-icons/si";
+import { SiJavascript, SiReact, SiBootstrap, SiRedux } from "react-icons/si";
 import { FaGreaterThan, FaLessThan } from "react-icons/fa";
 import { ImHtmlFive, ImCss3, ImGit } from "react-icons/im";
 
@@ -27,6 +27,12 @@ const techs = [
     title: "React",
     text: "React is a JavaScript library for building user interfaces. It is maintained by Facebook and a community of individual developers and companies. React can be used as a base in the development of single-page or mobile applications.",
     icon: <SiReact size={50} color="rgb(65,224,253)" />,
+  },
+
+  {
+    title: "Redux",
+    text: "Redux is an open-source JavaScript library for managing application state. It is most commonly used with libraries such as React or Angular for building user interfaces. Similar to Facebook's Flux architecture, it was created by Dan Abramov and Andrew Clark.",
+    icon: <SiRedux size={50} color="rgb(175,135,239)" />,
   },
 
   {

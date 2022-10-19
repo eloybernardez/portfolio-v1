@@ -5,17 +5,6 @@ import { Project } from "../Components/Project";
 
 const PROJECTS = [
   {
-    title: "Pig Game",
-    languages: "HTML / CSS / JS",
-    preview: require("../images/pig-game-opt.webp"),
-    alt: "Pig Game",
-    description:
-      "A game where two players throw a 6-sided dice repeteadly, adding the dice number to the player score, until one of them reaches a score of 100 or more.",
-    code: "https://github.com/eloybernardez/pig-game",
-    page: "https://eloybernardez.github.io/pig-game/",
-    state: "finished",
-  },
-  {
     title: "Bankist App",
     languages: "HTML / CSS / JS / React",
     preview: require("../images/bankist-v2-opt.webp"),
@@ -35,6 +24,28 @@ const PROJECTS = [
       "A TODO machine where you can add / complete / remove TODOS. Also, you can search for a specific TODO using the search bar.",
     code: "https://github.com/eloybernardez/todo-machine",
     page: "https://todo-machine-ecru.vercel.app/",
+    state: "finished",
+  },
+  {
+    title: "Pokedux",
+    languages: "HTML / CSS / JS / React / Redux",
+    preview: require("../images/pokedux-v2.webp"),
+    alt: "Pokedux",
+    description:
+      "Online 'pokedux' that every trainer needs to have if he/she wants to catch 'em all!",
+    code: "https://github.com/eloybernardez/pokedux/tree/main",
+    page: "http://pokedux-azure.vercel.app/",
+    state: "finished",
+  },
+  {
+    title: "Pig Game",
+    languages: "HTML / CSS / JS",
+    preview: require("../images/pig-game-opt.webp"),
+    alt: "Pig Game",
+    description:
+      "A game where two players throw a 6-sided dice repeteadly, adding the dice number to the player score, until one of them reaches a score of 100 or more.",
+    code: "https://github.com/eloybernardez/pig-game",
+    page: "https://eloybernardez.github.io/pig-game/",
     state: "finished",
   },
 

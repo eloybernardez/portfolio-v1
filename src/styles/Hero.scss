@@ -1,20 +1,10 @@
-@keyframes slider {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(50%);
-  }
-}
-
-.arrow-slider {
-  animation: slider 1s infinite;
-  animation-direction: alternate;
+.btn-social {
+  transition: transform 1.5s 1.2s;
 }
 
 .btn-social:hover {
-  transition: all 1s;
-  transform: scale(1.4);
+  transition: transform 1s;
+  transform: scale(1.2);
 }
 
 .btn-projects:hover {
