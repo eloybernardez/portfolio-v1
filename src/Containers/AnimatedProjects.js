@@ -50,15 +50,15 @@ const PROJECTS = [
   },
 
   {
-    title: "Next.js Shop",
-    languages: "HTML / CSS / JS / Next.js",
+    title: "React Yard Sale",
+    languages: "HTML / CSS / JS / React",
     preview: require("../images/next-shop-opt.webp"),
     alt: "Next.js Shop",
     description:
       "E-commerce where you can add / remove products. You can also filter products by categories.",
-    code: "https://github.com/eloybernardez/next-shop",
-    page: "https://next-shop-omega.vercel.app/",
-    state: "in-progress",
+    code: "https://github.com/eloybernardez/react-yard-sale",
+    page: "https://react-yard-sale.vercel.app/",
+    state: "completed",
   },
 ];
 
