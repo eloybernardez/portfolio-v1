@@ -16,6 +16,17 @@ const PROJECTS = [
     state: "finished",
   },
   {
+    title: "React Yard Sale",
+    languages: "HTML / CSS / JS / React",
+    preview: require("../images/next-shop-opt.webp"),
+    alt: "React Yard Sale",
+    description:
+      "E-commerce where you can add / remove products. You can also filter products by categories. To effectivelly use the app you need to create to login.",
+    code: "https://github.com/eloybernardez/react-yard-sale",
+    page: "https://react-yard-sale.vercel.app/",
+    state: "finished",
+  },
+  {
     title: "Todo Machine",
     languages: "HTML / CSS / JS / React",
     preview: require("../images/todos-v2-opt.webp"),
@@ -47,18 +58,6 @@ const PROJECTS = [
     code: "https://github.com/eloybernardez/pig-game",
     page: "https://eloybernardez.github.io/pig-game/",
     state: "finished",
-  },
-
-  {
-    title: "React Yard Sale",
-    languages: "HTML / CSS / JS / React",
-    preview: require("../images/next-shop-opt.webp"),
-    alt: "Next.js Shop",
-    description:
-      "E-commerce where you can add / remove products. You can also filter products by categories.",
-    code: "https://github.com/eloybernardez/react-yard-sale",
-    page: "https://react-yard-sale.vercel.app/",
-    state: "completed",
   },
 ];
 
