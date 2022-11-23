@@ -1,6 +1,12 @@
 import React from "react";
 import { Accordion } from "react-bootstrap";
-import { SiJavascript, SiReact, SiBootstrap, SiRedux } from "react-icons/si";
+import {
+  SiJavascript,
+  SiReact,
+  SiBootstrap,
+  SiRedux,
+  SiMaterialui,
+} from "react-icons/si";
 import { FaGreaterThan, FaLessThan } from "react-icons/fa";
 import { ImHtmlFive, ImCss3, ImGit } from "react-icons/im";
 
@@ -39,6 +45,12 @@ const techs = [
     title: "Bootstrap",
     text: "Bootstrap is a free and open-source CSS framework directed at responsive, mobile-first front-end web development. It contains HTML, CSS and JavaScript-based design templates for typography, forms, buttons, navigation, and other interface components.",
     icon: <SiBootstrap size={50} color={"rgb(117, 50, 249)"} />,
+  },
+
+  {
+    title: "Material UI",
+    text: "Material-UI is an open-source project that features React components that implement Google's Material Design. It is a collection of CSS and React components that implement Google's Material Design specification with the development of responsive web design in mind.",
+    icon: <SiMaterialui size={50} color={"rgb(0,127,255)"} />,
   },
 
   {
