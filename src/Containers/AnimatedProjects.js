@@ -21,7 +21,7 @@ const PROJECTS = [
     preview: require("../images/next-shop-opt.webp"),
     alt: "React Yard Sale",
     description:
-      "E-commerce where you can add / remove products. You can also filter products by categories. To effectivelly use the app you need to create to login.",
+      "E-commerce where you can add / remove products. You can also filter products by categories. To effectivelly use the app you need to to login.",
     code: "https://github.com/eloybernardez/react-yard-sale",
     page: "https://react-yard-sale.vercel.app/",
     state: "finished",

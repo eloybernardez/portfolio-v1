@@ -40,13 +40,13 @@ function Hero() {
               initial={{ x: -25, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.8 }}
-              className="px-5 text-center"
+              className="px-2 text-center  "
             >
-              I’m a <span className="text-primary ">FrontEnd Developer</span>{" "}
-              oriented to <span className="text-primary">React</span>. <br></br>
-              I love creating{" "}
+              I’m a argentinian{" "}
+              <span className="text-primary ">React Developer</span>. <br></br>I
+              love creating{" "}
               <span className="text-primary">
-                innovative life-changing webpages
+                innovative life-changing web pages
               </span>{" "}
               that everybody can use.
             </m.p>
