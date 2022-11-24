@@ -21,7 +21,7 @@ const PROJECTS = [
     preview: require("../images/next-shop-opt.webp"),
     alt: "React Yard Sale",
     description:
-      "E-commerce where you can add / remove products. You can also filter products by categories. To effectivelly use the app you need to to login.",
+      "E-commerce where you can add / remove products. You can also filter products by categories. To effectivelly use the app you need to login.",
     code: "https://github.com/eloybernardez/react-yard-sale",
     page: "https://react-yard-sale.vercel.app/",
     state: "finished",
@@ -35,6 +35,17 @@ const PROJECTS = [
       "A TODO machine where you can add / complete / remove TODOS. Also, you can search for a specific TODO using the search bar.",
     code: "https://github.com/eloybernardez/todo-machine",
     page: "https://todo-machine-ecru.vercel.app/",
+    state: "finished",
+  },
+  {
+    title: "Interview Casino",
+    languages: "HTML / CSS / JS / Material UI / React",
+    preview: require("../images/casino.webp"),
+    alt: "Interview Casino",
+    description:
+      "A Casino's bet register app to set bets, add players and calculate a sum of the bets since opening time of the previous day (7am) to opening time of the current day. There is only a login for crupiers and manager since players can see their current score directly.",
+    code: "https://github.com/eloybernardez/interview-casino",
+    page: "https://interview-casino.vercel.app/",
     state: "finished",
   },
   {
