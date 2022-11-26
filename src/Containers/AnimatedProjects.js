@@ -11,6 +11,8 @@ const PROJECTS = [
     alt: "Bankist App",
     description:
       "App where you can transfer money to another account and request a loan to the bank.",
+    instructions:
+      "username: eb - password: 1111 / username: jd - password: 2222",
     code: "https://github.com/eloybernardez/bankist-react-app",
     page: "https://bankist-react-app.vercel.app/",
     state: "finished",
@@ -22,6 +24,7 @@ const PROJECTS = [
     alt: "React Yard Sale",
     description:
       "E-commerce where you can add / remove products. You can also filter products by categories. To effectivelly use the app you need to login.",
+    instructions: "user: eloy@gmail.com - password:1234",
     code: "https://github.com/eloybernardez/react-yard-sale",
     page: "https://react-yard-sale.vercel.app/",
     state: "finished",
@@ -44,6 +47,8 @@ const PROJECTS = [
     alt: "Interview Casino",
     description:
       "A Casino's bet register app to set bets, add players and calculate a sum of the bets since opening time of the previous day (7am) to opening time of the current day. There is only a login for crupiers and manager since players can see their current score directly.",
+    instructions:
+      "user: crupier - password: crupierpass / user: manager - password: managerpass",
     code: "https://github.com/eloybernardez/interview-casino",
     page: "https://interview-casino.vercel.app/",
     state: "finished",

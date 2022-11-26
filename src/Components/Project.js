@@ -22,6 +22,13 @@ function Project({ project }) {
           {project.languages}
         </Card.Subtitle>
         <Card.Text className="py-2">{project.description}</Card.Text>
+        {project.instructions ? (
+          <Card.Text className="py-2">
+            <h6 className="text-dark fw-bold">Instructions</h6>
+            {project.instructions}
+          </Card.Text>
+        ) : null}
+
         <Stack
           direction="horizontal"
           gap={3}
