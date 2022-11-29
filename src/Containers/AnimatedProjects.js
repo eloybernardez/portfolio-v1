@@ -5,12 +5,12 @@ import { Project } from "../Components/Project";
 
 const PROJECTS = [
   {
-    title: "Bankist App",
+    title: "Bankist",
     languages: "HTML / CSS / JS / React",
     preview: require("../images/bankist-v2-opt.webp"),
     alt: "Bankist App",
     description:
-      "App where you can transfer money to another account and request a loan to the bank.",
+      "Bank webpage where we can transfer money to another account, request a loan and even close our own account. It's possible to see our money balance and some statistics of our transactions. As any other bank app, there is a timer to logout the user and a button to sort the movements by date.",
     instructions:
       "username: eb - password: 1111 / username: jd - password: 2222",
     code: "https://github.com/eloybernardez/bankist-react-app",
@@ -23,7 +23,7 @@ const PROJECTS = [
     preview: require("../images/next-shop-opt.webp"),
     alt: "React Yard Sale",
     description:
-      "E-commerce where you can add / remove products. You can also filter products by categories. To effectivelly use the app you need to login.",
+      "E-commerce where you can add / remove products, filter products by categories, create an account, and change your password. You need to log in to buy products, nevertheless, you can use the app normally.",
     instructions: "user: eloy@gmail.com - password:1234",
     code: "https://github.com/eloybernardez/react-yard-sale",
     page: "https://react-yard-sale.vercel.app/",
