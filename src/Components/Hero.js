@@ -42,7 +42,7 @@ function Hero() {
               transition={{ duration: 0.8 }}
               className="px-2 text-center  "
             >
-              I’m a argentinian{" "}
+              I’m an argentinian{" "}
               <span className="text-primary ">React Developer</span>. <br></br>I
               love creating{" "}
               <span className="text-primary">
