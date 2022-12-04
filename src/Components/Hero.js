@@ -2,12 +2,7 @@ import React from "react";
 import { Stack, Button, Container, Row, Col } from "react-bootstrap";
 import { m, useMotionValue, useTransform } from "framer-motion";
 
-import {
-  FaFacebookF as Facebook,
-  FaInstagram as Instagram,
-  FaLinkedinIn as Linkedin,
-  FaGithub as Github,
-} from "react-icons/fa";
+import { FaLinkedinIn as Linkedin, FaGithub as Github } from "react-icons/fa";
 
 import { FiChevronsRight as ChevronDoubleRight } from "react-icons/fi";
 
@@ -81,28 +76,8 @@ function Hero() {
             <Stack
               className="pt-5 pb-3 justify-content-center"
               direction="horizontal"
-              gap={2}
+              gap={4}
             >
-              <Button
-                className="btn-social"
-                type="button"
-                variant="link"
-                as="a"
-                href="https://www.facebook.com/eloy.bernardez"
-              >
-                <Facebook size={25} className="text-primary" />
-              </Button>
-
-              <Button
-                className="btn-social"
-                variant="link"
-                type="button"
-                as="a"
-                href="https://www.instagram.com/eloy.bernardez"
-              >
-                <Instagram size={25} className="text-primary" />
-              </Button>
-
               <Button
                 className="btn-social"
                 variant="link"
@@ -110,7 +85,7 @@ function Hero() {
                 as="a"
                 href="https://www.linkedin.com/in/eloy-bernardez/"
               >
-                <Linkedin size={25} className="text-primary" />
+                <Linkedin size={35} className="text-primary" />
               </Button>
 
               <Button
@@ -120,7 +95,7 @@ function Hero() {
                 as="a"
                 href="https://github.com/eloybernardez"
               >
-                <Github size={25} className="text-primary" />
+                <Github size={35} className="text-primary" />
               </Button>
             </Stack>
           </Col>
