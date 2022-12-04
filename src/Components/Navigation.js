@@ -6,7 +6,7 @@ import "../styles/Navigation.scss";
 const links = ["Home", "About Me", "Projects", "Contact"];
 
 function Navigation() {
-  const [show, setShow] = useState(false);
+  const [, setShow] = useState(false);
 
   const handleShow = () => {
     setShow(true);
@@ -31,14 +31,14 @@ function Navigation() {
             <List className="text-primary" size={30} />
           </Navbar.Toggle>
 
-          <Navbar.Collapse className="justify-content-end ">
-            <Nav className="bg-dark align-items-center">
+          <Navbar.Collapse className="justify-content-end  ">
+            <Nav className="bg-dark align-items-center ">
               {links.map((item, index) => (
                 <Nav.Item
                   key={`Navigation-${index}`}
                   type="button"
                   eventKey={`#${item.toLowerCase()}`}
-                  className="py-3 px-3 fw-bold text-white text-decoration-none fadeIn "
+                  className="py-3 px-3 fw-bold text-white text-decoration-none fadeIn  "
                 >
                   <Nav.Link
                     href={`#${item.toLowerCase()}`}
