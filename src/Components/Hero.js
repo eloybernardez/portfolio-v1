@@ -112,7 +112,7 @@ function Hero() {
               className="astro red-supergiant"
             ></m.div>
             <m.div
-              initial={{ x: 0, y: 0, rotate: 0, zIndex: 1 }} //50
+              initial={{ x: 0, y: 0, rotate: 0, zIndex: 1 }}
               animate={{
                 x: [0, -600, -480, 300, 0],
                 y: [0, -20, 0, 10, 0],
