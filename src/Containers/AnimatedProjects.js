@@ -10,7 +10,7 @@ const PROJECTS = [
     preview: require("../images/bankist-v2-opt.webp"),
     alt: "Bankist App",
     description:
-      "Bank webpage where we can transfer money to another account, request a loan and even close our own account. It's possible to see our money balance and some statistics of our transactions. As any other bank app, there is a timer to logout the user and a button to sort the movements by date.",
+      "Bank webpage for transfering money to another account, requesting a loan and closing an account. It's possible to see the money balance and some statistics of the transactions. As any other bank app, there is a timer to logout the user and a button to sort the movements by date.",
     instructions:
       "username: eb - password: 1111 / username: jd - password: 2222",
     code: "https://github.com/eloybernardez/bankist-react-app",
@@ -23,7 +23,7 @@ const PROJECTS = [
     preview: require("../images/next-shop-opt.webp"),
     alt: "React Yard Sale",
     description:
-      "E-commerce where you can add / remove products, filter products by categories, create an account, and change your password. You need to log in to buy products, nevertheless, you can use the app normally.",
+      "E-commerce for adding / removing products, filtering products by categories, creating an account, and changing password. You need to log in to buy products, nevertheless, you can use the app normally.",
     instructions: "user: eloy@gmail.com - password:1234",
     code: "https://github.com/eloybernardez/react-yard-sale",
     page: "https://react-yard-sale.vercel.app/",
@@ -35,7 +35,7 @@ const PROJECTS = [
     preview: require("../images/todos-v2-opt.webp"),
     alt: "Todo Machine",
     description:
-      "A TODO machine where you can add / complete / remove TODOS. Also, you can search for a specific TODO using the search bar.",
+      "A TODO machine to add / complete / remove TODOS. Also, for searching a specific TODO using the search bar.",
     code: "https://github.com/eloybernardez/todo-machine",
     page: "https://todo-machine-ecru.vercel.app/",
     state: "finished",
@@ -70,7 +70,7 @@ const PROJECTS = [
     preview: require("../images/pig-game-opt.webp"),
     alt: "Pig Game",
     description:
-      "A game where two players throw a 6-sided dice repeteadly, adding the dice number to the player score, until one of them reaches a score of 100 or more.",
+      "A game in which two players throw a 6-sided dice repeteadly, adding the dice number to the player score, until one of them reaches a score of 100 or more.",
     code: "https://github.com/eloybernardez/pig-game",
     page: "https://eloybernardez.github.io/pig-game/",
     state: "finished",
