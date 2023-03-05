@@ -5,6 +5,17 @@ import { Project } from "../Components/Project";
 
 const PROJECTS = [
   {
+    title: "Golds Gym",
+    languages: "HTML / CSS / JS / React / Material UI ",
+    preview: require("../images/gold-gym.webp"),
+    alt: "Golds Gym",
+    description:
+      "When you workout is common to look for exercises of all kinds. Maybe you want to train your chest but you don't have dumbells... There is where Golds Gym comes into action. Search exercises by muscle or by name, learn how to do them by watching Youtube videos and variations of them with different equipment or similar exercises. Also, keeping track of what you eat is a good idea to define objectives and set goals. Because of that, Golds Gym comes with Macro and calorie calculator.",
+    code: "https://golds-gym-black.vercel.app/",
+    page: "https://github.com/eloybernardez/golds-gym",
+    state: "finished",
+  },
+  {
     title: "Bankist",
     languages: "HTML / CSS / JS / React",
     preview: require("../images/bankist-v2-opt.webp"),
