@@ -5,6 +5,17 @@ import { Project } from "../Components/Project";
 
 const PROJECTS = [
   {
+    title: 'Grey Matter',
+    languages: 'HTML / CSS / JS / React / Next.js / Tailwind CSS',
+    preview: require('../images/gm-landing.webp'),
+    alt: 'Grey Matter',
+    description:
+      "Grey Matter is an educational project created five years ago to solve an enormous demand for meaningful private math and physics classes. Grey Matter focuses on teaching to a deep level, building solid foundations in math and algebra, and giving their students an extendable learning method. This webpage serves as a landing page, showing possible customers, Grey Matter's services, FAQs, prices, and subjects.",
+    code: 'https://github.com/eloybernardez/grey-matter-v2',
+    page: 'https://grey-matter.vercel.app/',
+    state: 'finished',
+  },
+  {
     title: 'Golds Gym',
     languages: 'HTML / CSS / JS / React / Material UI ',
     preview: require('../images/golds-gym.webp'),
