@@ -35,8 +35,8 @@ const PROJECTS = [
       "Bank webpage for transfering money to another account, requesting a loan and closing an account. It's possible to see the money balance and some statistics of the transactions. As any other bank app, there is a timer to logout the user and a button to sort the movements by date.",
     instructions:
       'username: eb - password: 1111 / username: jd - password: 2222',
-    code: 'https://github.com/eloybernardez/bankist-react-app',
-    page: 'https://bankist-react-app.vercel.app/',
+    code: 'https://github.com/eloybernardez/bankist-v2',
+    page: 'https://bankist-dusky.vercel.app/',
     state: 'finished',
   },
   {
