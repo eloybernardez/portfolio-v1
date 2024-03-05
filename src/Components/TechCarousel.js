@@ -153,7 +153,7 @@ const icons = [
   },
 ];
 
-const TECH_URL = 'http://localhost:1234/techs'
+const TECH_URL = 'https://api-node-two-xi.vercel.app/techs'
 
 const TechCarousel = () => {
   const [techs, setTechs] = useState([])

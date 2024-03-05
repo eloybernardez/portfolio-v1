@@ -98,7 +98,7 @@ import { Project } from "../Components/Project";
 //   },
 // ];
 
-const PROJECTS_URL = 'http://localhost:1234/projects'
+const PROJECTS_URL = 'https://api-node-two-xi.vercel.app/projects'
 
 const AnimatedProjects = () => {
   const [loading, setLoading] = useState(true);
