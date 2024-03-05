@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import { Accordion } from "react-bootstrap";
 import {
   SiJavascript,
@@ -8,14 +8,16 @@ import {
   SiMaterialui,
   SiNextdotjs,
   SiTailwindcss,
+  SiJquery,
+  SiAngular,
+  SiMicrosoftsqlserver,
+  SiDotnet,
 } from 'react-icons/si';
 import { FaGreaterThan, FaLessThan } from 'react-icons/fa';
 import { ImHtmlFive, ImCss3, ImGit } from 'react-icons/im';
 
-const techs = [
+const icons = [
   {
-    title: 'HTML5',
-    text: 'HTML5 is a markup language used for structuring and presenting content on the World Wide Web. It is the fifth and final major HTML version that is a World Wide Web Consortium recommendation.',
     icon: (
       <ImHtmlFive
         size={50}
@@ -24,8 +26,6 @@ const techs = [
     ),
   },
   {
-    title: 'CSS3',
-    text: 'CSS3 is a style sheet language used for describing the presentation of a document written in a markup language. It is a cornerstone technology of the World Wide Web.',
     icon: (
       <ImCss3
         size={50}
@@ -34,8 +34,6 @@ const techs = [
     ),
   },
   {
-    title: 'JavaScript',
-    text: 'JavaScript is a high-level, dynamic, untyped, and interpreted programming language. It has been standardized in the ECMAScript language specification. Alongside HTML and CSS, it is one of the three core technologies of the World Wide Web.',
     icon: (
       <SiJavascript
         size={50}
@@ -44,10 +42,23 @@ const techs = [
       />
     ),
   },
-
   {
-    title: 'React',
-    text: 'React is a JavaScript library for building user interfaces. It is maintained by Facebook and a community of individual developers and companies. React can be used as a base in the development of single-page or mobile applications.',
+    icon: (
+      <SiJquery
+        size={50}
+        color='rgb(0,187,255)'
+      />
+    ),
+  },
+  {
+    icon: (
+      <SiAngular
+        size={50}
+        color='rgb(204,0,0)'
+      />
+    ),
+  },
+  {
     icon: (
       <SiReact
         size={50}
@@ -57,8 +68,6 @@ const techs = [
   },
 
   {
-    title: 'Redux',
-    text: "Redux is an open-source JavaScript library for managing application state. It is most commonly used with libraries such as React or Angular for building user interfaces. Similar to Facebook's Flux architecture, it was created by Dan Abramov and Andrew Clark.",
     icon: (
       <SiRedux
         size={50}
@@ -68,8 +77,6 @@ const techs = [
   },
 
   {
-    title: 'Next.js',
-    text: 'Next.js is an open-source React front-end development web framework that enables functionality such as server-side rendering and generating static websites for React based web applications.',
     icon: (
       <SiNextdotjs
         size={50}
@@ -79,8 +86,6 @@ const techs = [
   },
 
   {
-    title: 'Bootstrap',
-    text: 'Bootstrap is a free and open-source CSS framework directed at responsive, mobile-first front-end web development. It contains HTML, CSS and JavaScript-based design templates for typography, forms, buttons, navigation, and other interface components.',
     icon: (
       <SiBootstrap
         size={50}
@@ -90,8 +95,6 @@ const techs = [
   },
 
   {
-    title: 'Material UI',
-    text: "Material-UI is an open-source project that features React components that implement Google's Material Design. It is a collection of CSS and React components that implement Google's Material Design specification with the development of responsive web design in mind.",
     icon: (
       <SiMaterialui
         size={50}
@@ -101,8 +104,6 @@ const techs = [
   },
 
   {
-    title: 'Tailwind CSS',
-    text: 'Tailwind CSS is a utility-first CSS framework for rapidly building custom user interfaces. It is a highly customizable, low-level CSS framework that gives you all of the building blocks you need to build bespoke designs without any annoying opinionated styles you have to fight to override.',
     icon: (
       <SiTailwindcss
         size={50}
@@ -112,8 +113,6 @@ const techs = [
   },
 
   {
-    title: 'Styled Components',
-    text: 'Styled Components is a library for React that allows you to write CSS in JS.',
     icon: (
       <>
         <FaLessThan
@@ -128,10 +127,23 @@ const techs = [
       </>
     ),
   },
-
   {
-    title: 'Git',
-    text: 'Git is free and open source software for distributed version control: tracking changes in any set of files, usually used for coordinating work among programmers collaboratively developing source code during software development.',
+    icon: (
+      <SiDotnet
+        size={50}
+        color='rgb(0,99,177)'
+      />
+    ),
+  },
+  {
+    icon: (
+      <SiMicrosoftsqlserver
+        size={50}
+        color='rgb(0,120,215)'
+      />
+    ),
+  },
+  {
     icon: (
       <ImGit
         size={50}
@@ -141,7 +153,37 @@ const techs = [
   },
 ];
 
+const TECH_URL = 'http://localhost:1234/techs'
+
 const TechCarousel = () => {
+  const [techs, setTechs] = useState([])
+
+  const fetchTechs = async () => {
+    const techs = []
+
+    const data = await fetch(TECH_URL)
+    const res = await data.json()
+
+    if (!res || res.length === 0) {
+      console.error('No techs found')
+      return
+    }
+
+    res.forEach((tech, index) => {
+      techs.push({
+        icon: icons[index].icon,
+        title: tech.title,
+        text: tech.text,
+      })
+    })
+
+    setTechs(techs)
+  }
+
+  useEffect(() => {
+    fetchTechs()
+  }, [])
+
   return (
     <Accordion className="px-4 ">
       {techs.map((tech, index) => (

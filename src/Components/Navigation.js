@@ -21,7 +21,7 @@ function Navigation() {
         fixed="top"
       >
         <Container className="text-white">
-          <Navbar.Brand href="#home" className="text-white title  ">
+          <Navbar.Brand href="#home" className="text-white title">
             <span className="text-primary">&lt; </span>
             eloy.dev
             <span className="text-primary"> /&gt;</span>
@@ -37,7 +37,7 @@ function Navigation() {
                 <Nav.Item
                   key={`Navigation-${index}`}
                   type="button"
-                  eventKey={`#${item.toLowerCase()}`}
+                  eventkey={`#${item.toLowerCase()}`}
                   className="py-3 px-3 fw-bold text-white text-decoration-none fadeIn  "
                 >
                   <Nav.Link
