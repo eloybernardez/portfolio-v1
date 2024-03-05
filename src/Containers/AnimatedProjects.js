@@ -14,6 +14,12 @@ const AnimatedProjects = () => {
     try {
       const res = await fetch(PROJECTS_URL)
       const data = await res.json()
+
+      if (!data || data.length === 0) {
+        console.error('No techs found')
+        return
+      }
+
       setProjects(data)
       setLoadingProjects(false)
       } catch(e) {

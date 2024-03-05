@@ -161,21 +161,25 @@ const TechCarousel = () => {
   const fetchTechs = async () => {
     const techs = []
 
-    const data = await fetch(TECH_URL)
-    const res = await data.json()
+  try {
+    const res = await fetch(TECH_URL)
+    const data = await res.json()
 
-    if (!res || res.length === 0) {
+    if (!data || data.length === 0) {
       console.error('No techs found')
       return
     }
 
-    res.forEach((tech, index) => {
+    data.forEach((tech, index) => {
       techs.push({
         icon: icons[index].icon,
         title: tech.title,
         text: tech.text,
       })
     })
+  } catch(e) {
+    console.error(e.message)
+  }
 
     setTechs(techs)
   }
@@ -185,7 +189,7 @@ const TechCarousel = () => {
   }, [])
 
   return (
-    <Accordion className="px-4 ">
+    <Accordion className="px-4">
       {techs.map((tech, index) => (
         <Accordion.Item key={`Tech-${index}`} eventKey={`${index}`}>
           <Accordion.Header className="d-flex align-items-center">
