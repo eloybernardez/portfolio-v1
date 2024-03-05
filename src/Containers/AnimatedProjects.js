@@ -3,7 +3,7 @@ import { Container, Row, Col, Image, Spinner } from "react-bootstrap";
 import { m } from "framer-motion";
 import { Project } from "../Components/Project";
 
-const PROJECTS_URL = 'https://api-node-two-xi.vercel.app/projects'
+const PROJECTS_URL = 'https://apiportfolio-dev-efaq.3.us-1.fl0.io/projects'
 
 const AnimatedProjects = () => {
   const [loading, setLoading] = useState(true);
