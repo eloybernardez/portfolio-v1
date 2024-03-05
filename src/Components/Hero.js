@@ -37,13 +37,13 @@ function Hero() {
               transition={{ duration: 0.8 }}
               className="px-2 text-center  "
             >
-              I’m an argentinian{" "}
-              <span className="text-primary ">React Developer</span>. <br></br>I
+              I’m a solutions-oriented {" "}
+              <span className="text-primary fw-bold">Full Stack Developer</span>. <br></br>I
               love creating{" "}
-              <span className="text-primary">
-                innovative life-changing web pages
+              <span className="text-primary fw-bold">
+                innovative life-changing applications
               </span>{" "}
-              that everybody can use.
+              for making people lives easier.
             </m.p>
 
             <Stack
