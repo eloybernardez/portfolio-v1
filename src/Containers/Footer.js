@@ -26,7 +26,7 @@ const Footer = () => {
               <Row>
                 <Col className="mb-2">
                   <Envelope size={30} className="text-secondary fw-bolder" />
-                  <span className="px-2">eloy.ricardo.550@gmail.com</span>
+                  <span className="px-2">eloybdev@gmail.com</span>
                 </Col>
               </Row>
 
