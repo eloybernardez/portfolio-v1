@@ -8,3 +8,5 @@ This page was made with:
 - SASS
 - Bootstrap
 - React
+- Node.js
+- Express
