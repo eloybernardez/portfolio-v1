@@ -1,9 +1,7 @@
 import React from "react";
 import { Stack, Button, Container, Row, Col } from "react-bootstrap";
 import { m, useMotionValue, useTransform } from "framer-motion";
-
-import { FaLinkedinIn as Linkedin, FaGithub as Github } from "react-icons/fa";
-
+import { FaLinkedinIn as Linkedin, FaGithub as Github, FaFilePdf as CvDownload  } from "react-icons/fa";
 import { FiChevronsRight as ChevronDoubleRight } from "react-icons/fi";
 
 import "../styles/Hero.scss";
@@ -78,6 +76,17 @@ function Hero() {
               direction="horizontal"
               gap={4}
             >
+
+              <Button
+                className="btn-social"
+                variant="link"
+                type="button"
+                as="a"
+                href="https://apiportfolio-dev-efaq.3.us-1.fl0.io/cv"
+              >
+                <CvDownload size={35} className="text-primary" />
+              </Button>
+
               <Button
                 className="btn-social"
                 variant="link"

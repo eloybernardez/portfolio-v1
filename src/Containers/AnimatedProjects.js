@@ -9,9 +9,9 @@ const AnimatedProjects = () => {
   const [loadingProjects, setLoadingProjects] = useState(true)
   const [PROJECTS, setProjects] = useState([])
 
-  const fetchProjects = async (signal) => {
+  const fetchProjects = async () => {
     try {
-      const res = await fetch(URLS.PROJECTS_URL, { signal })
+      const res = await fetch(URLS.PROJECTS_URL)
       const data = await res.json()
 
       if (!data || data.length === 0) {
