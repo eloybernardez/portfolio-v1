@@ -1,20 +1,20 @@
-import React from "react";
-import { Card, Button, Stack, Badge } from "react-bootstrap";
-import { AiOutlineCode as CodeSlash } from "react-icons/ai";
-import { BsBoxArrowUpRight as BoxArrowUpRight } from "react-icons/bs";
-import "../styles/Project.scss";
+import React from 'react'
+import { Card, Button, Stack, Badge } from 'react-bootstrap'
+import { AiOutlineCode as CodeSlash } from 'react-icons/ai'
+import { BsBoxArrowUpRight as BoxArrowUpRight } from 'react-icons/bs'
+import '../styles/Project.scss'
 
 function Project({ project }) {
   return (
     <Card border="white" className="align-items-center justify-content-center ">
       <Card.Body className="w-100 justify-content-center">
         <Card.Title className="fw-bolder">
-          {project.title}{" "}
+          {project.title}{' '}
           <Badge
-            bg={`${project.state === "finished" ? "primary" : "warning"}`}
+            bg={`${project.state === 'finished' ? 'primary' : 'warning'}`}
             className="text-dark"
           >
-            {`${project.state === "finished" ? "Completed" : "In progress"}`}
+            {`${project.state === 'finished' ? 'Completed' : 'In progress'}`}
           </Badge>
         </Card.Title>
 
@@ -32,34 +32,35 @@ function Project({ project }) {
         <Stack
           direction="horizontal"
           gap={3}
-          className="justify-content-center align-items-center"
+          className="px-3 px-md-0 justify-content-between justify-content-md-center align-items-md-center"
         >
           <Button
-            className="border-0 btn-lg "
+            className="border-0 btn-lg project-btn"
             as="a"
             href={project.code}
             variant="transparent"
+            aria-label="Code repository"
           >
-            <CodeSlash
-              size={30}
-              className="text-secondary project-btn"
-            ></CodeSlash>
+            <span className="fs-6 text-secondary">Code</span>
+            <CodeSlash size={33} className="ms-1 text-secondary"></CodeSlash>
           </Button>
           <Button
-            className="border-0 btn-lg project-btn "
+            className="border-0 btn-lg project-btn"
             as="a"
             href={project.page}
             variant="transparent"
+            aria-label="Project page"
           >
+            <span className="fs-6 text-secondary">Project</span>
             <BoxArrowUpRight
-              size={30}
-              className="text-secondary project-btn"
+              size={29}
+              className="ms-1 text-secondary"
             ></BoxArrowUpRight>
           </Button>
         </Stack>
       </Card.Body>
     </Card>
-  );
+  )
 }
 
-export { Project };
+export { Project }
