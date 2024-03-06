@@ -2,8 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { Container, Row, Col, Image, Spinner } from 'react-bootstrap'
 import { m } from 'framer-motion'
 import { Project } from '../Components/Project'
-
-const PROJECTS_URL = 'https://apiportfolio-dev-efaq.3.us-1.fl0.io/projects'
+import { URLS } from '../utils/urls'
 
 const AnimatedProjects = () => {
   const [loading, setLoading] = useState(true)
@@ -12,7 +11,7 @@ const AnimatedProjects = () => {
 
   const fetchProjects = async (signal) => {
     try {
-      const res = await fetch(PROJECTS_URL, { signal })
+      const res = await fetch(URLS.PROJECTS_URL, { signal })
       const data = await res.json()
 
       if (!data || data.length === 0) {
