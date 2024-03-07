@@ -18,7 +18,7 @@ function Hero() {
     >
       <Container>
         <Row>
-          <Col className="justify-content-evenly pt-md-5 mb-4 ">
+          <Col className="justify-content-evenly align-items-center pt-md-5 mb-4 ">
             <m.h2
               initial={{ opacity: 0, y: -10 }}
               animate={{ y: 0, opacity: 1 }}
@@ -72,7 +72,7 @@ function Hero() {
             </Stack>
 
             <Stack
-              className="pt-5 pb-3 justify-content-center"
+              className="pt-5 pb-3 ps-md-1 pe-md-4 justify-content-center align-items-center"
               direction="horizontal"
               gap={4}
             >
