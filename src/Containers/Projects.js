@@ -1,7 +1,7 @@
-import React from "react";
-import { m } from "framer-motion";
-import AnimatedProjects from "./AnimatedProjects";
-import "../styles/Projects.scss";
+import React from 'react'
+import { m } from 'framer-motion'
+import AnimatedProjects from './AnimatedProjects'
+import '../styles/Projects.scss'
 
 const Projects = () => {
   return (
@@ -18,7 +18,7 @@ const Projects = () => {
 
       <AnimatedProjects />
     </section>
-  );
-};
+  )
+}
 
-export { Projects };
+export { Projects }

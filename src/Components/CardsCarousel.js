@@ -1,6 +1,6 @@
-import React from "react";
-import { Carousel } from "react-bootstrap";
-import { AbilitiesCard } from "./AbilitiesCard";
+import React from 'react'
+import { Carousel } from 'react-bootstrap'
+import { AbilitiesCard } from './AbilitiesCard'
 
 const CardsCarousel = ({ cards }) => {
   return (
@@ -15,7 +15,7 @@ const CardsCarousel = ({ cards }) => {
         </Carousel.Item>
       ))}
     </Carousel>
-  );
-};
+  )
+}
 
-export { CardsCarousel };
+export { CardsCarousel }

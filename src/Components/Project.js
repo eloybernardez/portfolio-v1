@@ -4,7 +4,7 @@ import { AiOutlineCode as CodeSlash } from 'react-icons/ai'
 import { BsBoxArrowUpRight as BoxArrowUpRight } from 'react-icons/bs'
 import '../styles/Project.scss'
 
-function Project({ project }) {
+function Project ({ project }) {
   return (
     <Card border="white" className="align-items-center justify-content-center ">
       <Card.Body className="w-100 justify-content-center">
@@ -22,12 +22,14 @@ function Project({ project }) {
           {project.languages}
         </Card.Subtitle>
         <Card.Text className="py-2">{project.description}</Card.Text>
-        {project.instructions ? (
+        {project.instructions
+          ? (
           <Card.Text className="py-2">
             <span className="text-dark fw-bold">Instructions: </span>
             {project.instructions}
           </Card.Text>
-        ) : null}
+            )
+          : null}
 
         <Stack
           direction="horizontal"

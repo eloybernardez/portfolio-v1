@@ -1,5 +1,5 @@
-import React from "react";
-import "../styles/Main.scss";
+import React from 'react'
+import '../styles/Main.scss'
 
 const Main = (props) => {
   return (
@@ -8,7 +8,7 @@ const Main = (props) => {
       {props.children}
       {props.renderProjects()}
     </main>
-  );
-};
+  )
+}
 
-export { Main };
+export { Main }

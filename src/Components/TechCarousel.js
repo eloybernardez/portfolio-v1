@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Accordion, Spinner } from 'react-bootstrap'
+import { m } from 'framer-motion'
 import { icons } from '../utils/icons'
 import { URLS } from '../utils/urls'
 
@@ -40,15 +41,23 @@ const TechCarousel = () => {
   }, [])
 
   return (
+
     <Accordion className="px-4">
-      {loading ? (
+      {loading
+        ? (
         <div className="d-flex justify-content-center align-items-center">
           <Spinner animation="border" role="status" variant="success">
             <span className="visually-hidden">Loading...</span>
           </Spinner>
         </div>
-      ) : techs.length > 0 ? (
-        techs.map((tech, index) => (
+          )
+        : techs.length > 0
+          ? (
+              techs.map((tech, index) => (
+          <m.div
+            initial={{ x: -25, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.8 }}>
           <Accordion.Item key={`Tech-${index}`} eventKey={`${index}`}>
             <Accordion.Header className="d-flex align-items-center">
               {tech.icon}
@@ -56,10 +65,12 @@ const TechCarousel = () => {
             </Accordion.Header>
             <Accordion.Body className="fw-regular">{tech.text}</Accordion.Body>
           </Accordion.Item>
-        ))
-      ) : (
+          </m.div>
+              ))
+            )
+          : (
         <h3>No tech stack found 😅</h3>
-      )}
+            )}
     </Accordion>
   )
 }

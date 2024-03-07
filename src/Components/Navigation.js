@@ -1,16 +1,16 @@
-import React, { useState } from "react";
-import { Container, Navbar, Nav } from "react-bootstrap";
-import { BsList as List } from "react-icons/bs";
-import "../styles/Navigation.scss";
+import React, { useState } from 'react'
+import { Container, Navbar, Nav } from 'react-bootstrap'
+import { BsList as List } from 'react-icons/bs'
+import '../styles/Navigation.scss'
 
-const links = ["Home", "About Me", "Projects", "Contact"];
+const links = ['Home', 'About Me', 'Projects', 'Contact']
 
-function Navigation() {
-  const [, setShow] = useState(false);
+function Navigation () {
+  const [, setShow] = useState(false)
 
   const handleShow = () => {
-    setShow(true);
-  };
+    setShow(true)
+  }
 
   return (
     <header className="bg-dark pb-5">
@@ -50,7 +50,7 @@ function Navigation() {
               ))}
 
               <h4 className="title d-md-none align-self-center fw-bolder ">
-                <span className="text-primary px-2">&lt;</span> eloy.dev {""}
+                <span className="text-primary px-2">&lt;</span> eloy.dev {''}
                 <span className="text-primary">/&gt;</span>
               </h4>
             </Nav>
@@ -58,7 +58,7 @@ function Navigation() {
         </Container>
       </Navbar>
     </header>
-  );
+  )
 }
 
-export default Navigation;
+export default Navigation

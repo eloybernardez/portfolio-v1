@@ -1,9 +1,9 @@
-import React from "react";
-import { m } from "framer-motion";
-import TechCarousel from "../Components/TechCarousel";
-import "../styles/About.scss";
+import React from 'react'
+import { m } from 'framer-motion'
+import TechCarousel from '../Components/TechCarousel'
+import '../styles/About.scss'
 
-function About({ children }) {
+function About ({ children }) {
   return (
     <section id="about me" className="py-5 h-auto">
       <m.h3
@@ -32,18 +32,18 @@ function About({ children }) {
         className="fw-bold fs-2 text-center my-4"
       >
         <m.span
-          initial={{ color: "#000", scale: 1 }}
-          whileInView={{ color: "#cd5334", scale: 1.2 }}
+          initial={{ color: '#000', scale: 1 }}
+          whileInView={{ color: '#cd5334', scale: 1.2 }}
           transition={{ duration: 1 }}
         >
-          Tech{" "}
+          Tech{' '}
         </m.span>
         Stack
       </m.h4>
 
       <TechCarousel />
     </section>
-  );
+  )
 }
 
-export { About };
+export { About }

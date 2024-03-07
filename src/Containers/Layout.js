@@ -1,11 +1,11 @@
-import React from "react";
-import { Main } from "./Main";
-import { About } from "./About";
-import { Cards } from "../Components/Cards";
-import Hero from "../Components/Hero";
-import { Projects } from "./Projects";
-import Navigation from "../Components/Navigation";
-import { Footer } from "./Footer";
+import React from 'react'
+import { Main } from './Main'
+import { About } from './About'
+import { Cards } from '../Components/Cards'
+import Hero from '../Components/Hero'
+import { Projects } from './Projects'
+import Navigation from '../Components/Navigation'
+import { Footer } from './Footer'
 
 const Layout = () => {
   return (
@@ -18,7 +18,7 @@ const Layout = () => {
       </Main>
       <Footer />
     </>
-  );
-};
+  )
+}
 
-export default Layout;
+export default Layout

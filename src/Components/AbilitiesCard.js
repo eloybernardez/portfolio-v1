@@ -1,8 +1,8 @@
-import React from "react";
-import { Card } from "react-bootstrap";
-import "../styles/AbilitiesCard.scss";
+import React from 'react'
+import { Card } from 'react-bootstrap'
+import '../styles/AbilitiesCard.scss'
 
-function AbilitiesCard({ icon, title, abilities }) {
+function AbilitiesCard ({ icon, title, abilities }) {
   return (
     <Card className="border border-0 py-3 justify-content-center align-items-center bg-dark text-white w-100">
       {icon}
@@ -18,7 +18,7 @@ function AbilitiesCard({ icon, title, abilities }) {
         ))}
       </Card.Body>
     </Card>
-  );
+  )
 }
 
-export { AbilitiesCard };
+export { AbilitiesCard }

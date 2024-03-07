@@ -53,17 +53,20 @@ const AnimatedProjects = () => {
       ref={ref}
       className="fadeUpAnimation opacityAnimation hide show"
     >
-      {!loadingProjects ? (
-        PROJECTS.length > 0 ? (
-          PROJECTS.map((project, index) => (
+      {!loadingProjects
+        ? (
+            PROJECTS.length > 0
+              ? (
+                  PROJECTS.map((project, index) => (
             <Row
               key={`Project-${index}`}
               className="mb-3 bg-white border rounded "
             >
-              {index % 2 === 0 ? (
+              {index % 2 === 0
+                ? (
                 <>
                   <Col
-                    className={`justify-content-center align-items-center align-self-center col-12 col-sm-6 `}
+                    className={'justify-content-center align-items-center align-self-center col-12 col-sm-6 '}
                   >
                     {imageLoader(
                       <Image
@@ -76,20 +79,21 @@ const AnimatedProjects = () => {
                     )}
                   </Col>
                   <Col
-                    className={`justify-content-center align-self-center align-items-center col-12 col-sm-6`}
+                    className={'justify-content-center align-self-center align-items-center col-12 col-sm-6'}
                   >
                     <Project project={project} />
                   </Col>
                 </>
-              ) : (
+                  )
+                : (
                 <>
                   <Col
-                    className={`justify-content-center align-self-center align-items-center col-12 col-sm-6 order-1 `}
+                    className={'justify-content-center align-self-center align-items-center col-12 col-sm-6 order-1 '}
                   >
                     <Project project={project} />
                   </Col>
                   <Col
-                    className={`justify-content-center align-self-center align-items-center col-12 col-sm-6 order-0 order-sm-1 py-2`}
+                    className={'justify-content-center align-self-center align-items-center col-12 col-sm-6 order-0 order-sm-1 py-2'}
                   >
                     {imageLoader(
                       <Image
@@ -102,19 +106,21 @@ const AnimatedProjects = () => {
                     )}
                   </Col>
                 </>
-              )}
+                  )}
             </Row>
-          ))
-        ) : (
+                  ))
+                )
+              : (
           <h3>No projects found 😅</h3>
-        )
-      ) : (
+                )
+          )
+        : (
         <div className="d-flex justify-content-center align-items-center">
           <Spinner animation="border" role="status" variant="success">
             <span className="visually-hidden">Loading...</span>
           </Spinner>
         </div>
-      )}
+          )}
     </Container>
   ))
 

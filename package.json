@@ -25,7 +25,8 @@
   "eslintConfig": {
     "extends": [
       "react-app",
-      "react-app/jest"
+      "react-app/jest",
+      "standard"
     ]
   },
   "browserslist": {
@@ -42,6 +43,7 @@
   },
   "devDependencies": {
     "sass": "^1.54.3",
-    "source-map-explorer": "^2.5.2"
+    "source-map-explorer": "^2.5.2",
+    "standard": "^17.1.0"
   }
 }

@@ -1,10 +1,10 @@
-import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import React from 'react'
+import { Container, Row, Col } from 'react-bootstrap'
 import {
   BsFillEnvelopeFill as Envelope,
-  BsWhatsapp as Whatsapp,
-} from "react-icons/bs";
-import { m } from "framer-motion";
+  BsWhatsapp as Whatsapp
+} from 'react-icons/bs'
+import { m } from 'framer-motion'
 
 const Footer = () => {
   return (
@@ -32,22 +32,22 @@ const Footer = () => {
 
               <Row>
                 <Col>
-                  <Whatsapp size={30} className="text-secondary fw-bolder" />{" "}
-                  {""} +54 9 11-2391-8543
+                  <Whatsapp size={30} className="text-secondary fw-bolder" />{' '}
+                  {''} +54 9 11-2391-8543
                 </Col>
               </Row>
             </Container>
           </Col>
           <Col className="d-none d-md-flex justify-content-end align-items-center">
             <h4 className="title fw-bolder">
-              <span className="text-secondary px-2">&lt;</span> eloy.dev {""}
+              <span className="text-secondary px-2">&lt;</span> eloy.dev {''}
               <span className="text-secondary">/&gt;</span>
             </h4>
           </Col>
         </Row>
       </Container>
     </footer>
-  );
-};
+  )
+}
 
-export { Footer };
+export { Footer }

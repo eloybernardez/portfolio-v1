@@ -1,6 +1,6 @@
-import React from "react";
-import { Stack } from "react-bootstrap";
-import { AbilitiesCard } from "./AbilitiesCard";
+import React from 'react'
+import { Stack } from 'react-bootstrap'
+import { AbilitiesCard } from './AbilitiesCard'
 
 const CardsStack = ({ cards }) => {
   return (
@@ -18,7 +18,7 @@ const CardsStack = ({ cards }) => {
         />
       ))}
     </Stack>
-  );
-};
+  )
+}
 
-export { CardsStack };
+export { CardsStack }
