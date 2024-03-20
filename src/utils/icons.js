@@ -11,8 +11,9 @@ import {
   SiMicrosoftsqlserver,
   SiDotnet
 } from 'react-icons/si'
-import { FaGreaterThan, FaLessThan } from 'react-icons/fa'
+import { FaGreaterThan, FaLessThan, FaChalkboardTeacher, FaCodeBranch, FaLaptopCode } from 'react-icons/fa'
 import { ImHtmlFive, ImCss3, ImGit } from 'react-icons/im'
+import { BsSpeedometer } from 'react-icons/bs'
 
 export const icons = [
   {
@@ -72,4 +73,11 @@ export const icons = [
   {
     icon: <ImGit size={50} color="rgb(240,80,48)" />
   }
+]
+
+export const jobIcons = [
+  <FaCodeBranch size={20} color='#8aea92' />,
+  <FaLaptopCode size={20} color='#8aea92' />,
+  <BsSpeedometer size={20} color='#8aea92' />,
+  <FaChalkboardTeacher size={20} color='#8aea92' />
 ]

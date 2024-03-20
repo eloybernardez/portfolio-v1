@@ -55,10 +55,11 @@ const TechCarousel = () => {
           ? (
               techs.map((tech, index) => (
           <m.div
+            key={`Tech-${index}`}
             initial={{ x: -25, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.8 }}>
-          <Accordion.Item key={`Tech-${index}`} eventKey={`${index}`}>
+          <Accordion.Item eventKey={`${index}`}>
             <Accordion.Header className="d-flex align-items-center">
               {tech.icon}
               <p className="my-0 mx-2 fw-bold">{tech.title}</p>

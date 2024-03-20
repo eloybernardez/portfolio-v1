@@ -3,7 +3,7 @@ import { Container, Navbar, Nav } from 'react-bootstrap'
 import { BsList as List } from 'react-icons/bs'
 import '../styles/Navigation.scss'
 
-const links = ['Home', 'About Me', 'Projects', 'Contact']
+const links = ['Home', 'Experience', 'About Me', 'Projects', 'Contact']
 
 function Navigation () {
   const [, setShow] = useState(false)
