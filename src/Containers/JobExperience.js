@@ -39,7 +39,7 @@ export function JobExperience () {
                 <span className="border-bottom border-2 border-secondary"> Experience</span>
             </m.h3>
 
-            <m.div className="justify-content-center align-items-center">
+            <m.div className="d-flex justify-content-center align-items-center">
                 {jobs.length > 0
                   ? jobs.map((job, jobIndex) => (
                 <Job key={`job-${jobIndex}`} params={{ job }}/>

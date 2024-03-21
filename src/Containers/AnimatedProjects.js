@@ -111,7 +111,7 @@ const AnimatedProjects = () => {
                   ))
                 )
               : (
-          <h3>No projects found 😅</h3>
+          <h3 className="text-center">No projects found 😅</h3>
                 )
           )
         : (
