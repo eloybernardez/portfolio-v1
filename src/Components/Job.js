@@ -1,4 +1,4 @@
-import { Stack } from 'react-bootstrap'
+import { Container, Stack } from 'react-bootstrap'
 import { m } from 'framer-motion'
 import { jobIcons } from '../utils/icons'
 
@@ -31,9 +31,9 @@ export function Job ({ params }) {
                 {duration(job.startDate, job.endDate)}
             </h5>
 
-            <div className="align-items-center justify-content-center">
+            <Container className="align-items-center justify-content-center">
                 <p className='text-center'>{job.description.intro}</p>
-                <ul className="list-group px-2 px-md-5">
+                <ul className="list-group px-2 px-md-5 px-lg-1">
                     {job.description.highlights.map((hl, index) => (
                         <m.li
                         initial={{ x: (index + 1) % 2 === 0 ? 25 : -25, opacity: 0 }}
@@ -48,7 +48,7 @@ export function Job ({ params }) {
                         </m.li>
                     ))}
                 </ul>
-            </div>
+            </Container>
         </Stack>
   )
 }
