@@ -32,14 +32,14 @@ export function Job ({ params }) {
             </h5>
 
             <div className="align-items-center justify-content-center">
-                <p>{job.description.intro}</p>
-                <ul className="list-group">
+                <p className='text-center'>{job.description.intro}</p>
+                <ul className="list-group px-2 px-md-5">
                     {job.description.highlights.map((hl, index) => (
                         <m.li
                         initial={{ x: (index + 1) % 2 === 0 ? 25 : -25, opacity: 0 }}
                         whileInView={{ x: 0, opacity: 1 }}
                         key={`highligth-${index}`}
-                        className="list-group-item d-flex align-items-center text-bg-dark mb-2">
+                        className="list-group-item d-flex flex-column flex-md-row align-items-center text-bg-dark mb-2">
                             <span>{jobIcons[index]}</span>
                             <div className="mt-3 ms-3">
                                 <h6>{hl.title}</h6>

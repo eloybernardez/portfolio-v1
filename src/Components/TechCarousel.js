@@ -51,7 +51,7 @@ const TechCarousel = () => {
         )
       : techs.length > 0
         ? (
-          <Accordion className="px-5">
+          <Accordion className="px-md-5 px-3">
             {techs.map((tech, index) => (
                 <m.div
                   key={`Tech-${index}`}
