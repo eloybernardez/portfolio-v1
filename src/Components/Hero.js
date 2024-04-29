@@ -5,6 +5,7 @@ import { FaLinkedinIn as Linkedin, FaGithub as Github, FaFilePdf as CvDownload }
 import { FiChevronsRight as ChevronDoubleRight } from 'react-icons/fi'
 
 import '../styles/Hero.scss'
+import { URLS } from '../utils/urls'
 
 function Hero () {
   const x = useMotionValue(0)
@@ -86,7 +87,7 @@ function Hero () {
                   variant="link"
                   type="button"
                   as="a"
-                  href="https://apiportfolio-dev-efaq.3.us-1.fl0.io/cv"
+                  href={URLS.CV_URL}
                 >
                   <CvDownload size={35} className="text-primary" />
                 </Button>
