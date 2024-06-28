@@ -2,14 +2,19 @@ import { Container, Stack } from 'react-bootstrap'
 import { m } from 'framer-motion'
 import { jobIcons } from '../utils/icons'
 
+const pluralize = (amount, word) => amount === 1 ? word : `${word}s`
+
 const duration = (start, end) => {
   const startDate = new Date(start)
   const endDate = end ? new Date(end) : new Date()
   const diff = endDate.getTime() - startDate.getTime()
-  const months = diff / (1000 * 60 * 60 * 24 * 30)
-  const years = diff / (1000 * 60 * 60 * 24 * 365)
+  const months = Math.floor(Number(diff / (1000 * 60 * 60 * 24 * 30)))
+  const years = Math.floor(Number(diff / (1000 * 60 * 60 * 24 * 365)))
 
-  return years > 0 ? `${Math.floor(months)} months` : `${Math.floor(years)} years and ${Math.floor(months)} months`
+  const stringedAmountYears = pluralize(years, 'year')
+  const stringedAmountMonths = pluralize(months, 'month')
+
+  return years === 0 ? `${months} ${stringedAmountMonths}` : `${years} ${stringedAmountYears} and ${months} ${stringedAmountMonths}`
 }
 
 export function Job ({ params }) {

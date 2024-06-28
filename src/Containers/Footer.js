@@ -1,8 +1,7 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 import {
-  BsFillEnvelopeFill as Envelope,
-  BsWhatsapp as Whatsapp
+  BsFillEnvelopeFill as Envelope
 } from 'react-icons/bs'
 import { m } from 'framer-motion'
 
@@ -30,12 +29,6 @@ const Footer = () => {
                 </Col>
               </Row>
 
-              <Row>
-                <Col>
-                  <Whatsapp size={30} className="text-secondary fw-bolder" />{' '}
-                  {''} +54 9 11-2391-8543
-                </Col>
-              </Row>
             </Container>
           </Col>
           <Col className="d-none d-md-flex justify-content-end align-items-center">
