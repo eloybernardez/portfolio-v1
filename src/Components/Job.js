@@ -8,8 +8,8 @@ const duration = (start, end) => {
   const startDate = new Date(start)
   const endDate = end ? new Date(end) : new Date()
   const diff = endDate.getTime() - startDate.getTime()
-  const months = Math.floor(Number(diff / (1000 * 60 * 60 * 24 * 30)))
   const years = Math.floor(Number(diff / (1000 * 60 * 60 * 24 * 365)))
+  const months = years > 0 ? Math.floor(Number(diff / (1000 * 60 * 60 * 24 * 30) - years * 12)) : Math.floor(Number(diff / (1000 * 60 * 60 * 24 * 30)))
 
   const stringedAmountYears = pluralize(years, 'year')
   const stringedAmountMonths = pluralize(months, 'month')
